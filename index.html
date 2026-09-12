@@ -1,134 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <title>Mente | Agenda tu cita psicológica</title>
-</head>
+    <title>Mente | Agenda tu cita psicológica</title>
+  </head>
 
-<body class="body-container">
+  <body class="body-container">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <div class="logo-square">M</div>
+          <h1 class="logo-title">Mente</h1>
+        </div>
 
-  <header class="header">
-    <div class="container">
+        <nav class="options" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#">Encontrar psicólogo</a></li>
+            <li><a href="#">Instituciones</a></li>
+            <li><a href="#">Cómo funciona</a></li>
+            <li><a href="#">Para profesionales</a></li>
+          </ul>
+        </nav>
 
-      <div class="logo">
-        <div class="logo-square">M</div>
-        <h1 class="logo-title">Mente</h1>
+        <div class="buttons-login">
+          <a href="#" class="btn-login">Iniciar sesión</a>
+          <a href="#" class="btn-register">Registrarse</a>
+        </div>
       </div>
+    </header>
 
-      <nav class="options" aria-label="Navegación principal">
+    <main class="main-container">
+      <section class="title-section">
+        <h1>Agenda tu cita de psicología sin complicaciones</h1>
+      </section>
+
+      <section class="category-section">
+        <h2>Sección de categorías</h2>
+
         <ul>
-          <li><a href="#">Encontrar psicólogo</a></li>
-          <li><a href="#">Instituciones</a></li>
-          <li><a href="#">Cómo funciona</a></li>
-          <li><a href="#">Para profesionales</a></li>
+          <li><a href="#">Todas</a></li>
+          <li><a href="#">Ansiedad</a></li>
+          <li><a href="#">Depresión</a></li>
+          <li><a href="#">Terapia de pareja</a></li>
+          <li><a href="#">Duelo</a></li>
         </ul>
-      </nav>
 
-      <div class="buttons-login">
-        <a href="#" class="btn-login">Iniciar sesión</a>
-        <a href="#" class="btn-register">Registrarse</a>
-      </div>
+        <a href="#">Ver más</a>
+      </section>
 
-    </div>
-  </header>
+      <section class="psicologo-section">
+        <h2>Sección de psicólogos</h2>
 
-  <main class="main-container">
+        <ul>
+          <li>
+            <span>Dr. Samuel </span>
+            <a href="#"> Agendar cita</a>
+          </li>
 
-    <section class="title-section">
-      <h1>Agenda tu cita de psicología sin complicaciones</h1>
-    </section>
+          <li>
+            <span>Dr. Irving </span>
+            <a href="#"> Agendar cita</a>
+          </li>
 
-    <section class="category-section">
-      <h2>Sección de categorías</h2>
+          <li>
+            <span>Dr. Isaac </span>
+            <a href="#"> Agendar cita</a>
+          </li>
+        </ul>
 
-      <ul>
-        <li><a href="#">Todas</a></li>
-        <li><a href="#">Ansiedad</a></li>
-        <li><a href="#">Depresión</a></li>
-        <li><a href="#">Terapia de pareja</a></li>
-        <li><a href="#">Duelo</a></li>
-      </ul>
+        <a href="#">Ver más</a>
+      </section>
 
-      <a href="#">Ver más</a>
-    </section>
+      <section class="comentarios-section">
+        <h2>Sección de comentarios</h2>
 
-    <section class="psicologo-section">
-      <h2>Sección de psicólogos</h2>
+        <ul>
+          <li>
+            <h3>fulanito1</h3>
+            Lorem Ipsum es simplemente un texto de relleno de la industria<a
+              href="#"
+              >...Ver más</a
+            >
+          </li>
 
-      <ul>
-        <li>
-          <span>Dr. Samuel  </span>
-          <a href="#">  Agendar cita</a>
-        </li>
+          <li>
+            <h3>fulanito2</h3>
+            Lorem Ipsum es simplemente un texto de relleno de la industria<a
+              href="#"
+              >...Ver más</a
+            >
+          </li>
 
-        <li>
-          <span>Dr. Irving  </span>
-          <a href="#">  Agendar cita</a>
-        </li>
+          <li>
+            <h3>fulanito3</h3>
+            Lorem Ipsum es simplemente un texto de relleno de la industria<a
+              href="#"
+              >...Ver más</a
+            >
+          </li>
+        </ul>
+      </section>
 
-        <li>
-          <span>Dr. Isaac  </span>
-          <a href="#">  Agendar cita</a>
-        </li>
-      </ul>
+      <section id="multimedia">
+        <h2>Galeria multimedia</h2>
 
-      <a href="#">Ver más</a>
-    </section>
+        <!-- IMAGEN -->
+        <img
+          src="assets/img/psicologia.jpeg"
+          alt="Descripción de la imagen relacionada con psicología"
+          width="800"
+          height="450"
+          loading="lazy" />
 
-    <section class="comentarios-section">
-      <h2>Sección de comentarios</h2>
+        <!-- AUDIO -->
+        <audio controls preload="metadata">
+          <source src="assets/audio/audio.mp3" type="audio/mpeg" />
+          Tu navegador no soporta el elemento de audio.
+          <a href="assets/audio/audio.mp3">Descarga el audio aquí</a>.
+        </audio>
 
-      <ul>
-        <li>
-          <h3>fulanito1</h3>
-          Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-          
-        </li>
+        <!-- VIDEO -->
+        <video controls width="640" height="360" preload="metadata">
+          <source src="assets/video/cancion.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+          <a href="assets/video/cancion.mp4">Descarga el video aquí</a>.
+        </video>
+      </section>
+    </main>
 
-        <li>
-          <h3>fulanito2</h3>
-          Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-          
-        </li>
+    <footer class="footer-container">
+      <section>
+        <h3>Contáctanos</h3>
+        <ul>
+          <li>
+            <a href="#">inicio</a>
+          </li>
 
-        <li>
-          <h3>fulanito3</h3>
-          Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-          
-        </li>
-      </ul>
-    </section>
+          <li>
+            <a href="mailto:sadda@example.com?subject=Contactar"
+              >Enviar correo</a
+            >
+          </li>
 
-  </main>
-
-  <footer class="footer-container">
-    <section>
-      <h3>Contáctanos</h3>
-      <ul>
-        <li>
-          
-          <a href="#">inicio</a>
-        </li>
-
-        <li>
-          
-          <a href="mailto:sadda@example.com?subject=Contactar">Enviar correo</a>
-        </li>
-
-        <li>
-          
-          <a href="tel:+6767676767">Lamar</a>
-        </li>
-      </ul>
-
-
-
-    </section>
-  </footer>
-
-</body>
+          <li>
+            <a href="tel:+6767676767">Lamar</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 </html>
