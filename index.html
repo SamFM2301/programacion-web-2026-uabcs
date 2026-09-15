@@ -3,36 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="styles/style.css" />
-
     <title>Mente | Agenda tu cita psicológica</title>
   </head>
 
   <body class="body-container">
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <div class="logo-square">M</div>
-          <h1 class="logo-title">Mente</h1>
-        </div>
-
-        <nav class="options" aria-label="Navegación principal">
-          <ul>
-            <li><a href="#">Encontrar psicólogo</a></li>
-            <li><a href="#">Instituciones</a></li>
-            <li><a href="#">Cómo funciona</a></li>
-            <li><a href="#">Para profesionales</a></li>
-          </ul>
-        </nav>
-
-        <div class="buttons-login">
-          <a href="#" class="btn-login">Iniciar sesión</a>
-          <a href="#" class="btn-register">Registrarse</a>
-        </div>
-      </div>
-    </header>
-
     <main class="main-container">
       <section class="title-section">
         <h1>Agenda tu cita de psicología sin complicaciones</h1>
@@ -40,70 +14,182 @@
 
       <section class="category-section">
         <h2>Sección de categorías</h2>
-
-        <ul>
-          <li><a href="#">Todas</a></li>
-          <li><a href="#">Ansiedad</a></li>
-          <li><a href="#">Depresión</a></li>
-          <li><a href="#">Terapia de pareja</a></li>
-          <li><a href="#">Duelo</a></li>
-        </ul>
-
-        <a href="#">Ver más</a>
+        <table border="1">
+          <thead>
+            <tr>
+              <td><a href="#">Todas</a></td>
+              <td><a href="#">Ansiedad</a></td>
+              <td><a href="#">Depresión</a></td>
+              <td><a href="#">Terapia de pareja</a></td>
+              <td><a href="#">Duelo</a></td>
+              <td><a href="#">Ver más</a></td>
+            </tr>
+          </thead>
+        </table>
       </section>
 
       <section class="psicologo-section">
         <h2>Sección de psicólogos</h2>
-
-        <ul>
-          <li>
-            <span>Dr. Samuel </span>
-            <a href="#"> Agendar cita</a>
-          </li>
-
-          <li>
-            <span>Dr. Irving </span>
-            <a href="#"> Agendar cita</a>
-          </li>
-
-          <li>
-            <span>Dr. Isaac </span>
-            <a href="#"> Agendar cita</a>
-          </li>
-        </ul>
-
-        <a href="#">Ver más</a>
+        <table border="1">
+          <thead>
+            <tr>
+              <td><span>Dr. Samuel </span></td>
+              <td><span>Dr. Irving </span></td>
+              <td><span>Dr. Isaac </span></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#"> Agendar cita</a></td>
+              <td><a href="#"> Agendar cita</a></td>
+              <td><a href="#"> Agendar cita</a></td>
+            </tr>
+            <td colspan="3"><a href="#">Ver más</a></td>
+          </tbody>
+        </table>
       </section>
 
       <section class="comentarios-section">
         <h2>Sección de comentarios</h2>
-
-        <ul>
-          <li>
-            <h3>fulanito1</h3>
-            Lorem Ipsum es simplemente un texto de relleno de la industria<a
-              href="#"
-              >...Ver más</a
-            >
-          </li>
-
-          <li>
-            <h3>fulanito2</h3>
-            Lorem Ipsum es simplemente un texto de relleno de la industria<a
-              href="#"
-              >...Ver más</a
-            >
-          </li>
-
-          <li>
-            <h3>fulanito3</h3>
-            Lorem Ipsum es simplemente un texto de relleno de la industria<a
-              href="#"
-              >...Ver más</a
-            >
-          </li>
-        </ul>
+        <table border="1">
+          <thead>
+            <tr>
+              <td><h3>fulanito1</h3></td>
+              <td><h3>fulanito2</h3></td>
+              <td><h3>fulanito3</h3></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Lorem Ipsum es simplemente un texto de relleno de la industria<a
+                  href="#"
+                  >...Ver más</a
+                >
+              </td>
+              <td>
+                Lorem Ipsum es simplemente un texto de relleno de la industria<a
+                  href="#"
+                  >...Ver más</a
+                >
+              </td>
+              <td>
+                Lorem Ipsum es simplemente un texto de relleno de la industria<a
+                  href="#"
+                  >...Ver más</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
+
+      <form
+        action="/procesar-formulario"
+        method="GET"
+        enctype="multipart/form-data"
+      >
+        <h2>Formulario registro de usuario</h2>
+
+        <fieldset>
+          <legend>Requisitos para el registro</legend>
+
+          <div>
+            <label for="name-user">Nombre: </label>
+            <input
+              type="text"
+              name="name-user"
+              placeholder="Ingresa tu nombre"
+            />
+
+            <label for="last-name-user">Apellido: </label>
+            <input
+              type="text"
+              name="last-name-user"
+              placeholder="Ingresa tu apellido"
+            />
+
+            <br />
+            <br />
+          </div>
+
+          <div>
+            <label for="email-user">Correo: </label>
+            <input
+              type="text"
+              name="email-user"
+              placeholder="ejemplo123@gmail.com"
+            />
+
+            <label for="password-user">Contraseña: </label>
+            <input
+              type="password"
+              name="password-user"
+              placeholder="Ingrese su contraseña"
+            />
+
+            <br />
+            <br />
+          </div>
+
+          <div>
+            <label for="user-number">Numero de teléfono:</label>
+            <input
+              type="text"
+              name="user-number"
+              id="user-number"
+              placeholder="Numero de 10 digitos"
+            />
+          </div>
+
+          <div>
+            <p>Genero:</p>
+
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Hombre</label>
+
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Mujer</label>
+
+            <input type="radio" name="gender" id="other" value="other" />
+            <label for="other">Otro</label>
+          </div>
+
+          <div>
+            <p>Ingrese fecha de nacimiento:</p>
+
+            <select name="birth-day" id="birth-day">
+              <option value="0" selected>Dia</option>
+            </select>
+
+            <select name="birth-month" id="birth-month">
+              <option value="0" selected>Mes</option>
+            </select>
+
+            <select name="birth-year" id="birth-year">
+              <option value="0" selected>Año</option>
+            </select>
+
+            <br />
+            <br />
+          </div>
+
+          <div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms">
+              Acepto los
+              <a href="terms.html" target="_blank">terminos y condiciones</a>
+            </label>
+
+            <br />
+            <br />
+          </div>
+
+          <div>
+            <input type="button" value="Registrarse" />
+          </div>
+        </fieldset>
+      </form>
 
       <section id="multimedia">
         <h2>Galeria multimedia</h2>
@@ -114,14 +200,10 @@
           alt="Descripción de la imagen relacionada con psicología"
           width="800"
           height="450"
-          loading="lazy" />
+          loading="lazy"
+        />
 
-        <!-- AUDIO -->
-        <audio controls preload="metadata">
-          <source src="assets/audio/audio.mp3" type="audio/mpeg" />
-          Tu navegador no soporta el elemento de audio.
-          <a href="assets/audio/audio.mp3">Descarga el audio aquí</a>.
-        </audio>
+        <br />
 
         <!-- VIDEO -->
         <video controls width="640" height="360" preload="metadata">
@@ -129,6 +211,13 @@
           Tu navegador no soporta el elemento de video.
           <a href="assets/video/cancion.mp4">Descarga el video aquí</a>.
         </video>
+
+        <!-- AUDIO -->
+        <audio controls preload="metadata">
+          <source src="assets/audio/audio.mp3" type="audio/mpeg" />
+          Tu navegador no soporta el elemento de audio.
+          <a href="assets/audio/audio.mp3">Descarga el audio aquí</a>.
+        </audio>
       </section>
     </main>
 
@@ -152,5 +241,24 @@
         </ul>
       </section>
     </footer>
+
+    <script>
+      function fill(id, start, end) {
+        const select = document.getElementById(id);
+
+        for (let i = start; i <= end; i++) {
+          const option = document.createElement("option");
+          option.value = i;
+          option.textContent = i;
+          select.appendChild(option);
+        }
+      }
+
+      fill("birth-day", 1, 31);
+      fill("birth-month", 1, 12);
+
+      const currentYear = new Date().getFullYear();
+      fill("birth-year", currentYear - 100, currentYear);
+    </script>
   </body>
 </html>
