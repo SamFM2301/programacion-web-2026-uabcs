@@ -14,25 +14,39 @@
     </style>
   </head>
   <body>
+    <a href="../index.html">&larr; Regresar</a>
+
+    <h1>Registro de usuario</h1>
+    <p>Completa tus datos para poder agendar tu cita.</p>
+
     <form
       action="/procesar-formulario"
-      method="GET"
+      method="POST"
       enctype="multipart/form-data"
+      novalidate
     >
-      <h2>Formulario registro de usuario</h2>
-
       <fieldset>
-        <legend>Requisitos para el registro</legend>
+        <legend>Datos personales</legend>
 
         <div>
           <label for="name-user">Nombre: </label>
-          <input type="text" name="name-user" placeholder="Ingresa tu nombre" />
+          <input
+            type="text"
+            id="name-user"
+            name="name-user"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+
+          <br />
 
           <label for="last-name-user">Apellido: </label>
           <input
             type="text"
+            id="last-name-user"
             name="last-name-user"
             placeholder="Ingresa tu apellido"
+            required
           />
 
           <br />
@@ -40,84 +54,104 @@
         </div>
 
         <div>
-          <label for="email-user">Correo: </label>
+          <label for="email-user">Correo electronico: </label>
           <input
-            type="text"
+            type="email"
+            id="email-user"
             name="email-user"
+            autocomplete="email"
             placeholder="ejemplo123@gmail.com"
+            required
+            aria-describedby="email-hint"
           />
+
+          <br />
 
           <label for="password-user">Contraseña: </label>
           <input
             type="password"
+            id="password-user"
             name="password-user"
-            placeholder="Ingrese su contraseña"
+            autocomplete="new-password"
+            placeholder="Crea tu constraseña"
+            minlength="8"
+            required
           />
 
           <br />
           <br />
         </div>
 
-        <div>
-          <label for="user-number">Numero de teléfono:</label>
-          <input
-            type="text"
-            name="user-number"
-            id="user-number"
-            placeholder="Numero de 10 digitos"
-          />
-        </div>
-
-        <div>
-          <p>Genero:</p>
-
-          <input type="radio" name="gender" id="male" value="male" />
-          <label for="male">Hombre</label>
-
-          <input type="radio" name="gender" id="female" value="female" />
-          <label for="female">Mujer</label>
-
-          <input type="radio" name="gender" id="other" value="other" />
-          <label for="other">Otro</label>
-        </div>
-
-        <div>
-          <p>Ingrese fecha de nacimiento:</p>
-
-          <select name="birth-day" id="birth-day">
-            <option value="0" selected>Dia</option>
-          </select>
-
-          <select name="birth-month" id="birth-month">
-            <option value="0" selected>Mes</option>
-          </select>
-
-          <select name="birth-year" id="birth-year">
-            <option value="0" selected>Año</option>
-          </select>
-
-          <br />
-          <br />
-        </div>
-
-        <div>
-          <input type="checkbox" name="terms" id="terms" />
-          <label for="terms">
-            Acepto los
-            <a href="terms.html" target="_blank">terminos y condiciones</a>
-          </label>
-
-          <br />
-          <br />
-        </div>
-
-        <div>
-          <input type="button" value="Registrarse" />
-        </div>
+        <label for="user-number">Numero de telefono:</label>
+        <input
+          type="tel"
+          id="user-number"
+          name="user-number"
+          placeholder="10 dígitos"
+          required
+        />
       </fieldset>
-    </form>
 
-    <a href="../index.html"><-- Regresar</a>
+      <fieldset>
+        <legend>Genero</legend>
+
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Hombre</label>
+
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Mujer</label>
+
+        <input type="radio" name="gender" id="other" value="other" />
+        <label for="other">Otro</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fecha de nacimiento</legend>
+
+        <label for="birth-day">Dia</label>
+        <select name="birth-day" id="birth-day" required>
+          <option value="" selected>Dia</option>
+        </select>
+
+        <label for="birth-month">Mes</label>
+        <select name="birth-month" id="birth-month" required>
+          <option value="" selected>Mes</option>
+        </select>
+
+        <label for="birth-year">Año</label>
+        <select name="birth-year" id="birth-year" required>
+          <option value="" selected>Año</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tipo de cita</legend>
+
+        <label for="service-type">Que servicio buscas?</label>
+        <select id="service-type" name="service-type" required>
+          <option value="" selected>Selecciona una opcion</option>
+          <option value="consulta">Consulta general</option>
+          <option value="seguimiento">Seguimiento</option>
+          <option value="urgencia">Urgencia</option>
+        </select>
+      </fieldset>
+
+      <div>
+        <br />
+
+        <input type="checkbox" name="terms" id="terms" required />
+        <label for="terms">
+          Acepto los
+          <a href="terms.html" target="_blank" rel="noopener"
+            >términos y condiciones</a
+          >
+        </label>
+      </div>
+
+      <br />
+
+      <button type="submit">Registrarse</button>
+    </form>
 
     <script>
       function fill(id, start, end) {
