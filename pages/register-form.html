@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Regitro de usuario registrate con nosotros para agendar tu cita hoy mismo
+    </title>
+
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="/procesar-formulario"
+      method="GET"
+      enctype="multipart/form-data"
+    >
+      <h2>Formulario registro de usuario</h2>
+
+      <fieldset>
+        <legend>Requisitos para el registro</legend>
+
+        <div>
+          <label for="name-user">Nombre: </label>
+          <input type="text" name="name-user" placeholder="Ingresa tu nombre" />
+
+          <label for="last-name-user">Apellido: </label>
+          <input
+            type="text"
+            name="last-name-user"
+            placeholder="Ingresa tu apellido"
+          />
+
+          <br />
+          <br />
+        </div>
+
+        <div>
+          <label for="email-user">Correo: </label>
+          <input
+            type="text"
+            name="email-user"
+            placeholder="ejemplo123@gmail.com"
+          />
+
+          <label for="password-user">Contraseña: </label>
+          <input
+            type="password"
+            name="password-user"
+            placeholder="Ingrese su contraseña"
+          />
+
+          <br />
+          <br />
+        </div>
+
+        <div>
+          <label for="user-number">Numero de teléfono:</label>
+          <input
+            type="text"
+            name="user-number"
+            id="user-number"
+            placeholder="Numero de 10 digitos"
+          />
+        </div>
+
+        <div>
+          <p>Genero:</p>
+
+          <input type="radio" name="gender" id="male" value="male" />
+          <label for="male">Hombre</label>
+
+          <input type="radio" name="gender" id="female" value="female" />
+          <label for="female">Mujer</label>
+
+          <input type="radio" name="gender" id="other" value="other" />
+          <label for="other">Otro</label>
+        </div>
+
+        <div>
+          <p>Ingrese fecha de nacimiento:</p>
+
+          <select name="birth-day" id="birth-day">
+            <option value="0" selected>Dia</option>
+          </select>
+
+          <select name="birth-month" id="birth-month">
+            <option value="0" selected>Mes</option>
+          </select>
+
+          <select name="birth-year" id="birth-year">
+            <option value="0" selected>Año</option>
+          </select>
+
+          <br />
+          <br />
+        </div>
+
+        <div>
+          <input type="checkbox" name="terms" id="terms" />
+          <label for="terms">
+            Acepto los
+            <a href="terms.html" target="_blank">terminos y condiciones</a>
+          </label>
+
+          <br />
+          <br />
+        </div>
+
+        <div>
+          <input type="button" value="Registrarse" />
+        </div>
+      </fieldset>
+    </form>
+
+    <a href="../index.html"><-- Regresar</a>
+
+    <script>
+      function fill(id, start, end) {
+        const select = document.getElementById(id);
+
+        for (let i = start; i <= end; i++) {
+          const option = document.createElement("option");
+          option.value = i;
+          option.textContent = i;
+          select.appendChild(option);
+        }
+      }
+
+      fill("birth-day", 1, 31);
+      fill("birth-month", 1, 12);
+
+      const currentYear = new Date().getFullYear();
+      fill("birth-year", currentYear - 100, currentYear);
+    </script>
+  </body>
+</html>
