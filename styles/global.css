@@ -1,0 +1,23 @@
+:root {
+  --color-primary: #2b4c7e;
+  --color-primary-hover: #21406a;
+  --color-bg-base: #f5f7fa;
+  --color-bg-opac: #eef1f6;
+  --color-bg-contrast: #ffffff;
+  --color-bg-light: #e7eef8;
+  --color-text-titles: #1b2431;
+  --color-text-secondary: #5b6472;
+  --color-border: #e1e5eb;
+  --color-border-strong: #cbd2dc;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
