@@ -1,154 +1,197 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Mente el sitio donde puedes consultar, agendar y programar tu cita hoy!
+    </title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Genera tu cita con facilidad con nosotros, teniendo una gran diversidad de opciones de
-  profesionales certificados cerca de tu hogar.">
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/principal-page.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <img
+          src="assets/img/mente_logo.webp"
+          class="header-logo"
+          alt="mente logo"
+        />
 
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Mente | Consultas psicologicas con profesionales">
-  <meta property="og:description" content="Agenda tu cita con nosotros">
-  <meta property="og:image" content="https://mente-psicologia.com/preview.jpg">
-  <meta property="og:url" content="https://mente-psicologia.com/login.html">
-  <meta property="og:type" content="website">
+        <nav class="header-options">
+          <ul>
+            <li><a href="#">Encontrar psicólogo</a></li>
+            <li><a href="#">Terapia online</a></li>
+            <li><a href="#">Instituciones</a></li>
+            <li><a href="#">Cómo funciona</a></li>
+            <li><a href="#">Para profesionales</a></li>
+          </ul>
+        </nav>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mente | Consultas psicologicas con profesionales">
-  <meta name="twitter:description" content="Agenda tu cita con nosotros">
-  <meta name="twitter:image" content="https://mente-psicologia.com/preview.jpg">
+        <div class="header-buttons-section">
+          <a href="#" class="btn-login">Iniciar sesión</a>
+          <a href="#" class="btn-register">Registrarse</a>
+        </div>
+      </div>
+    </header>
 
-  <link rel="canonical" href="/pages/register-form.html">
-  <title>Mente | Agenda tu cita psicológica ya!</title>
+    <main>
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="info-section">
+            <div class="certificated-tag">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="icon icon-tabler icons-tabler-filled icon-tabler-point"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                />
+              </svg>
 
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/global.css">
-</head>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="icon icon-tabler icons-tabler-filled icon-tabler-rosette-discount-check"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12.01 2.011a3.2 3.2 0 0 1 2.113 .797l.154 .145l.698 .698a1.2 1.2 0 0 0 .71 .341l.135 .008h1a3.2 3.2 0 0 1 3.195 3.018l.005 .182v1c0 .27 .092 .533 .258 .743l.09 .1l.697 .698a3.2 3.2 0 0 1 .147 4.382l-.145 .154l-.698 .698a1.2 1.2 0 0 0 -.341 .71l-.008 .135v1a3.2 3.2 0 0 1 -3.018 3.195l-.182 .005h-1a1.2 1.2 0 0 0 -.743 .258l-.1 .09l-.698 .697a3.2 3.2 0 0 1 -4.382 .147l-.154 -.145l-.698 -.698a1.2 1.2 0 0 0 -.71 -.341l-.135 -.008h-1a3.2 3.2 0 0 1 -3.195 -3.018l-.005 -.182v-1a1.2 1.2 0 0 0 -.258 -.743l-.09 -.1l-.697 -.698a3.2 3.2 0 0 1 -.147 -4.382l.145 -.154l.698 -.698a1.2 1.2 0 0 0 .341 -.71l.008 -.135v-1l.005 -.182a3.2 3.2 0 0 1 3.013 -3.013l.182 -.005h1a1.2 1.2 0 0 0 .743 -.258l.1 -.09l.698 -.697a3.2 3.2 0 0 1 2.269 -.944zm3.697 7.282a1 1 0 0 0 -1.414 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                />
+              </svg>
 
-<body class="body-container">
-  <main class="main-container">
-    <section class="title-section">
-      <h1 id="title-page">Agenda tu cita de psicología sin complicaciones</h1>
+              +180 psicólogos profesionales certificados.
+            </div>
 
-      <h2 class="registrate-aqui">
-        No tienes cuenta?
-        <a href="pages/register-form.html">Registrate aqui</a>
-      </h2>
-    </section>
+            <h1 class="hero-title">
+              Cuidado psicologico profesional y <span>cercano</span>, sin salir
+              de tu hogar
+            </h1>
 
-    <section class="category-section">
-      <h2>Sección de categorías</h2>
-      <table border="2">
-        <thead>
-          <tr>
-            <td><a href="#">Todas</a></td>
-            <td><a href="#">Ansiedad</a></td>
-            <td><a href="#">Depresión</a></td>
-            <td><a href="#">Terapia de pareja</a></td>
-            <td><a href="#">Duelo</a></td>
-            <td><a href="#">Ver más</a></td>
-          </tr>
-        </thead>
-      </table>
-    </section>
+            <p class="hero-paragraph">
+              Conecta por videollamada segura con psicoterapeutas especializados
+              de verdad. Sesiones individuales desde la comodidad y privacidad
+              de tu espacio, a tu propio ritmo.
+            </p>
 
-    <section class="psicologo-section">
-      <h2>Sección de psicólogos</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <td><span>Dr. Samuel </span></td>
-            <td><span>Dr. Irving </span></td>
-            <td><span>Dr. Isaac </span></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="#"> Agendar cita</a></td>
-            <td><a href="#"> Agendar cita</a></td>
-            <td><a href="#"> Agendar cita</a></td>
-          </tr>
-          <td colspan="3"><a href="#">Ver más</a></td>
-        </tbody>
-      </table>
-    </section>
+            <form
+              class="search-appointment"
+              role="search"
+              action="#"
+              method="get"
+            >
+              <fieldset class="search-modalidad">
+                <input
+                  type="radio"
+                  name="modalidad"
+                  id="online"
+                  value="online"
+                  checked
+                />
+                <label for="online">Online (Videollamada)</label>
 
-    <section class="comentarios-section">
-      <h2>Sección de comentarios</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <td>
-              <h3>fulanito1</h3>
-            </td>
-            <td>
-              <h3>fulanito2</h3>
-            </td>
-            <td>
-              <h3>fulanito3</h3>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-            </td>
-            <td>
-              Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-            </td>
-            <td>
-              Lorem Ipsum es simplemente un texto de relleno de la industria<a href="#">...Ver más</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+                <input
+                  type="radio"
+                  name="modalidad"
+                  id="presencial"
+                  value="presencial"
+                />
+                <label for="presencial">Presencial</label>
+              </fieldset>
 
-    <section id="multimedia">
-      <h2>Galeria multimedia</h2>
+              <div class="search-campos">
+                <label>
+                  <span class="sr-only">Motivo de consulta</span>
+                  <input
+                    type="text"
+                    name="tema"
+                    placeholder="Ansiedad y estrés"
+                  />
+                </label>
 
-      <!-- IMAGEN -->
-      <img src="assets/img/psicologia.jpeg" alt="Descripción de la imagen relacionada con psicología" width="800"
-        height="450" loading="lazy" />
+                <label>
+                  <span class="sr-only">Cuándo</span>
+                  <select name="fecha">
+                    <option value="semana">Esta semana</option>
+                    <option value="mes">Este mes</option>
+                  </select>
+                </label>
 
-      <br />
+                <button type="submit">Buscar</button>
+              </div>
 
-      <!-- VIDEO -->
-      <video controls width="640" height="360" preload="metadata">
-        <source src="assets/video/cancion.mp4" type="video/mp4" />
-        Tu navegador no soporta el elemento de video.
-        <a href="assets/video/cancion.mp4">Descarga el video aquí</a>.
-      </video>
+              <ul class="search__garantias">
+                <li>100% Confidencial y cifrado</li>
+                <li>Primera sesión en 24h</li>
+                <li>4.9/5 satisfacción</li>
+              </ul>
+            </form>
+          </div>
 
-      <!-- AUDIO -->
-      <audio controls preload="metadata">
-        <source src="assets/audio/audio.mp3" type="audio/mpeg" />
-        Tu navegador no soporta el elemento de audio.
-        <a href="assets/audio/audio.mp3">Descarga el audio aquí</a>.
-      </audio>
-    </section>
-  </main>
+          <div class="image-section">
+            <div class="image-content">
+              <img
+                src="assets/img/psicology-meeting.webp"
+                class="hero-image"
+                alt="imagen videollamada"
+              />
 
-  <footer class="footer-container">
-    <section>
-      <h3>Contáctanos</h3>
-      <ul>
-        <li>
-          <a href="#">inicio</a>
-        </li>
+              <div class="session-tag">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-video"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4"
+                  />
+                  <path
+                    d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8"
+                  />
+                </svg>
+                Sesión en vivo activa
+              </div>
 
-        <li>
-          <a href="mailto:sadda@example.com?subject=Contactar">Enviar correo</a>
-        </li>
+              <div class="doctor-card">
+                <img
+                  src="assets/img/psycologhist-profile-image.webp"
+                  class="doctor-avatar"
+                  width="48px"
+                  height="48px"
+                  alt="imagen perfil psicologo"
+                />
 
-        <li>
-          <a href="tel:+6767676767">Llamar</a>
-        </li>
-      </ul>
-    </section>
-  </footer>
-</body>
+                <h2 class="doctor-name">Dr. Samuel Frias</h2>
 
+                <p class="available-text">Disponible hoy para videollamada</p>
+
+                <p class="stars-qualification">
+                  4.9 <span>(128 reseñas)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
 </html>
