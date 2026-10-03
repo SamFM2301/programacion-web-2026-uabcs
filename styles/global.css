@@ -5,7 +5,7 @@
 
 :root {
   --max-width: 1280px;
-  --lateral-spacing: 1rem;
+  --lateral-spacing: 1.5rem;
 
   --color-background: #eef4ff;
   --color-background-2: #f5f7fa;
@@ -26,6 +26,11 @@
 
   --color-green-icon: #003d36;
   --color-orange-dark: #9a442d;
+  --color-orange-dark-hover: #833824;
+
+  --color-navy: #002046;
+  --color-surface: #f8f9ff;
+  --color-field: #e8eefb;
 
   --base-font: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
@@ -46,5 +51,17 @@ body {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: var(--espaciado-lateral);
+  padding-inline: var(--lateral-spacing);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

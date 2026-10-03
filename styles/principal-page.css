@@ -72,7 +72,7 @@ a {
 }
 
 main {
-  background-color: var(--color-surface);
+  background-color: var(--color-background);
 }
 
 .icon {
@@ -162,6 +162,8 @@ main {
   color: var(--color-text-secondary);
   font-weight: 500;
 }
+
+/* ---- tarjeta de busqueda ---- */
 
 .search-appointment {
   width: 100%;
@@ -439,7 +441,7 @@ main {
   color: #555;
 }
 
-/* CATEGORÍAS RÁPIDAS */
+/* CATEGORIAS RAPIDAS */
 
 .categories-section {
   padding-block: 8px 72px;
