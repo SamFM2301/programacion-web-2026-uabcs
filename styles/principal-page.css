@@ -184,7 +184,7 @@ main {
   min-width: 0;
 }
 
-.search-modalidad input[type="radio"] {
+.search-modalidad input[type='radio'] {
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -549,4 +549,135 @@ main {
     align-items: flex-start;
     gap: 12px;
   }
+}
+
+.how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slogan-how-it-works {
+  margin-bottom: 12px;
+  font-size: 0.65rem;
+  color: var(--color-orange-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-how-it-works {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.paragraph-how-it-works {
+  width: 70%;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.steps-cards-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.step-card {
+  width: 375px;
+  height: 350px;
+  background-color: #fff;
+  padding: 32px;
+  margin-top: 56px;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.corner-decoration {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+}
+
+.step-card .svg-container {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: grid;
+  place-content: center;
+  border-radius: 12px;
+}
+
+.step1,
+.step3 {
+  background-color: #dbe9ff66;
+}
+
+.step2 {
+  background-color: #ffdbd266;
+}
+
+.step1-icon,
+.step3-icon {
+  background-color: #dbe9ff;
+}
+
+.step2-icon {
+  background-color: #ffdbd2;
+}
+
+.step-card span {
+  color: var(--color-orange-dark);
+  font-weight: 600;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.step-card h2 {
+  margin-top: 8px;
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.step-card p {
+  margin-top: 15px;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.step-card a {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--color-text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: background 0.3s;
+
+  svg {
+    font-size: 0.8rem;
+  }
+}
+
+.step-card a:hover {
+  color: var(--color-blue-primary);
 }
