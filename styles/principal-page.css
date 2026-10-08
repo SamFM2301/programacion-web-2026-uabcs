@@ -2,10 +2,17 @@ a {
   text-decoration: none;
 }
 
+ul li {
+  list-style: none;
+}
+
 .header {
   height: 80px;
   background-color: var(--color-background-2);
-  /*box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);*/
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 2px 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .header-logo {
@@ -680,4 +687,116 @@ main {
 
 .step-card a:hover {
   color: var(--color-blue-primary);
+}
+
+/* -- FOOTER -- */
+
+.footer {
+  min-height: 400px;
+  background-color: #f8f9ff;
+  font-size: 0.875rem;
+}
+
+.footer .container {
+  min-height: 400px;
+  padding: 64px 48px 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'info especialidades recursos legal'
+    'privacy privacy privacy privacy';
+  column-gap: 32px;
+  row-gap: 48px;
+  align-items: start;
+}
+
+.principal {
+  display: contents;
+}
+
+.general-info {
+  grid-area: info;
+}
+
+.especiality {
+  grid-area: especialidades;
+}
+
+.resources {
+  grid-area: recursos;
+}
+
+.legal {
+  grid-area: legal;
+}
+
+.footer img {
+  width: 100px;
+}
+
+.footer h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a,
+.footer p {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: gray;
+}
+
+.footer .tag {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 6px 12px;
+  background-color: #d5e4f9;
+  border-radius: 8px;
+  font-size: 0.67rem;
+  font-weight: 600;
+  color: #44474e;
+  gap: 8px;
+}
+
+.footer .privacy {
+  grid-area: privacy;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: 'copyright links';
+  align-items: center;
+}
+
+.footer .privacy p {
+  grid-area: copyright;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.footer .privacy ul {
+  grid-area: links;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer .privacy ul li a {
+  font-weight: 500;
+}
+
+.footer .privacy svg {
+  width: 18px;
 }
