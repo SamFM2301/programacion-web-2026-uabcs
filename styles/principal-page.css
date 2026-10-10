@@ -630,6 +630,11 @@ main {
   border-radius: 12px;
 }
 
+.icon-steps-card {
+  width: 28px;
+  height: 28px;
+}
+
 .step1,
 .step3 {
   background-color: #dbe9ff66;
