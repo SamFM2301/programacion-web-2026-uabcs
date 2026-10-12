@@ -16,7 +16,7 @@
       property="og:description"
       content="Conecta con +180 psicólogos certificados para terapia online y presencial. Videollamadas seguras, primera sesión en 24h, 4.9/5 satisfacción."
     />
-    <meta property="og:image" content="assets/img/mente_logo.webp" />
+    <meta property="og:image" content="assets/img/mente-logo.webp" />
     <meta property="og:url" content="https://mente.es/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -27,7 +27,7 @@
       name="twitter:description"
       content="Terapia psicológica profesional y cercana. Psicólogos certificados, videollamadas seguras, agenda en 2 minutos."
     />
-    <meta name="twitter:image" content="assets/img/mente_logo.webp" />
+    <meta name="twitter:image" content="assets/img/mente-logo.webp" />
     <link rel="canonical" href="https://mente.es/" />
     <link
       rel="preload"
@@ -36,8 +36,8 @@
       crossorigin
       href="assets/fonts/PlusJakartaSans.ttf"
     />
-    <link rel="preload" as="image" href="assets/img/mente_logo.webp" />
-    <link rel="preload" as="image" href="assets/img/psicology-meeting.webp" />
+    <link rel="preload" as="image" href="assets/img/mente-logo.webp" />
+    <link rel="preload" as="image" href="assets/img/psychology-meeting.webp" />
 
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/principal-page.css" />
@@ -65,7 +65,7 @@
     <header class="header">
       <div class="container header-container">
         <img
-          src="assets/img/mente_logo.webp"
+          src="assets/img/mente-logo.webp"
           class="header-logo"
           alt="mente logo"
         />
@@ -91,7 +91,7 @@
       <section class="hero-section">
         <div class="container hero-container">
           <div class="info-section">
-            <div class="certificated-tag">
+            <div class="certified-tag">
               <svg class="icon tag-dot" aria-hidden="true">
                 <use xlink:href="assets/icons/sprite.svg#tag-dot"></use>
               </svg>
@@ -118,12 +118,12 @@
               action="#"
               method="get"
             >
-              <fieldset class="search-modalidad">
+              <fieldset class="search-modality">
                 <legend class="sr-only">Modalidad de la sesión</legend>
 
                 <input
                   type="radio"
-                  name="modalidad"
+                  name="modality"
                   id="online"
                   value="online"
                   checked
@@ -137,11 +137,11 @@
 
                 <input
                   type="radio"
-                  name="modalidad"
-                  id="presencial"
-                  value="presencial"
+                  name="modality"
+                  id="in-person"
+                  value="in-person"
                 />
-                <label for="presencial">
+                <label for="in-person">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#building"></use>
                   </svg>
@@ -149,31 +149,31 @@
                 </label>
               </fieldset>
 
-              <div class="search-campos">
-                <label class="search-field search-field-tema">
+              <div class="search-fields">
+                <label class="search-field search-field-topic">
                   <span class="sr-only">Motivo de consulta</span>
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#search"></use>
                   </svg>
                   <input
                     type="text"
-                    name="tema"
+                    name="topic"
                     placeholder="Ansiedad y estrés"
                   />
                 </label>
 
-                <label class="search-field search-field-fecha">
+                <label class="search-field search-field-date">
                   <span class="sr-only">Cuándo</span>
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#calendar"></use>
                   </svg>
-                  <select name="fecha">
-                    <option value="semana">Esta semana</option>
-                    <option value="mes">Este mes</option>
+                  <select name="date">
+                    <option value="week">Esta semana</option>
+                    <option value="month">Este mes</option>
                   </select>
                 </label>
 
-                <button type="submit" class="search-button">
+                <button type="submit" class="btn-search">
                   Buscar
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
@@ -181,7 +181,7 @@
                 </button>
               </div>
 
-              <ul class="search__garantias">
+              <ul class="search-guarantees">
                 <li>
                   <svg class="icon" aria-hidden="true">
                     <use
@@ -209,7 +209,7 @@
           <div class="image-section">
             <div class="image-content">
               <img
-                src="assets/img/psicology-meeting.webp"
+                src="assets/img/psychology-meeting.webp"
                 class="hero-image"
                 alt="Persona en videollamada con su psicólogo"
               />
@@ -226,7 +226,7 @@
 
               <div class="doctor-card">
                 <img
-                  src="assets/img/psycologhist-profile-image.webp"
+                  src="assets/img/psychologist-profile.webp"
                   class="doctor-avatar"
                   width="48"
                   height="48"
@@ -242,14 +242,14 @@
                   </svg>
                 </h2>
 
-                <p class="available-text">
+                <p class="doctor-availability">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#tag-dot"></use>
                   </svg>
                   Disponible hoy para videollamada
                 </p>
 
-                <p class="stars-qualification">
+                <p class="doctor-rating">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#star"></use>
                   </svg>
@@ -323,44 +323,44 @@
 
       <section class="how-it-works-section">
         <div class="container how-it-works-container">
-          <span class="slogan-how-it-works"
+          <span class="how-it-works-eyebrow"
             >Un proceso simple y transparente</span
           >
 
-          <h2 class="title-how-it-works-section">
+          <h2 class="how-it-works-title">
             ¿Cómo funciona la terapia en Mente?
           </h2>
 
-          <p class="paragraph-how-it-works">
+          <p class="how-it-works-description">
             Diseñado para eliminar fricciones y cuidar de tu tranquilidad desde
             el momento en que decides iniciar tu camino.
           </p>
 
           <!-- SECCION DE CARDS -->
 
-          <div class="steps-cards-section">
+          <div class="step-cards">
             <!-- PASO 1-->
             <div class="step-card">
-              <div class="svg-container step1-icon">
-                <svg class="icon-steps-card" aria-hidden="true">
+              <div class="step-card-icon-wrapper step-card-icon-wrapper-1">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#list-search"></use>
                 </svg>
               </div>
 
-              <div class="corner-decoration step1"></div>
+              <div class="step-card-corner step-card-corner-1"></div>
 
-              <span class="step-number">Paso 01</span>
+              <span class="step-card-number">Paso 01</span>
 
-              <h2 class="step-title">1. Elige a tu psicólogo ideal</h2>
+              <h2 class="step-card-title">1. Elige a tu psicólogo ideal</h2>
 
-              <p class="step-text">
+              <p class="step-card-text">
                 Filtra por motivo de consulta, enfoque terapéutico y lee
                 valoraciones detalladas de pacientes previos.
               </p>
 
-              <a href="#" class="verfied-profile-link">
+              <a href="#" class="step-card-link">
                 Ver perfiles verificados
-                <svg class="icon-steps-card" aria-hidden="true">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
@@ -368,26 +368,26 @@
 
             <!-- PASO 2-->
             <div class="step-card">
-              <div class="svg-container step2-icon">
-                <svg class="icon-steps-card" aria-hidden="true">
+              <div class="step-card-icon-wrapper step-card-icon-wrapper-2">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#lock-cog"></use>
                 </svg>
               </div>
 
-              <div class="corner-decoration step2"></div>
+              <div class="step-card-corner step-card-corner-2"></div>
 
-              <span class="step-number">Paso 02</span>
+              <span class="step-card-number">Paso 02</span>
 
-              <h2 class="step-title">2. Agenda tu cita en 2 minutos</h2>
+              <h2 class="step-card-title">2. Agenda tu cita en 2 minutos</h2>
 
-              <p class="step-text">
+              <p class="step-card-text">
                 Elige el día y la hora que mejor se adapten a tu rutina sin
                 intermediarios, mensajes tardíos ni llamadas.
               </p>
 
-              <a href="#" class="verfied-profile-link">
+              <a href="#" class="step-card-link">
                 Disponibilidad inmediata
-                <svg class="icon-steps-card" aria-hidden="true">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
@@ -395,26 +395,26 @@
 
             <!-- PASO 3-->
             <div class="step-card">
-              <div class="svg-container step3-icon">
-                <svg class="icon-steps-card" aria-hidden="true">
+              <div class="step-card-icon-wrapper step-card-icon-wrapper-3">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#list-search"></use>
                 </svg>
               </div>
 
-              <div class="corner-decoration step3"></div>
+              <div class="step-card-corner step-card-corner-3"></div>
 
-              <span class="step-number">Paso 03</span>
+              <span class="step-card-number">Paso 03</span>
 
-              <h2 class="step-title">3. Conéctate desde donde estés</h2>
+              <h2 class="step-card-title">3. Conéctate desde donde estés</h2>
 
-              <p class="step-text">
+              <p class="step-card-text">
                 Ingresa a tu sala privada con cifrado clínico de extremo a
                 extremo desde tu computadora, tablet o móvil.
               </p>
 
-              <a href="#" class="verfied-profile-link">
+              <a href="#" class="step-card-link">
                 Sala 100% segura
-                <svg class="icon-steps-card" aria-hidden="true">
+                <svg class="step-card-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
@@ -426,9 +426,9 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="principal">
+        <div class="footer-main">
           <div class="general-info">
-            <img src="assets/img/mente_logo_plain.webp" alt="Logo de mente" />
+            <img src="assets/img/mente-logo-plain.webp" alt="Logo de mente" />
 
             <p>
               Plataforma integral de salud mental y bienestar emocional.
@@ -444,7 +444,7 @@
             </div>
           </div>
 
-          <div class="especiality list-footer">
+          <div class="specialty footer-list">
             <h3>Especialidades</h3>
 
             <ul>
@@ -456,7 +456,7 @@
             </ul>
           </div>
 
-          <div class="resources list-footer">
+          <div class="resources footer-list">
             <h3>Recursos y Ayuda</h3>
 
             <ul>
@@ -472,7 +472,7 @@
             </ul>
           </div>
 
-          <div class="legal list-footer">
+          <div class="legal footer-list">
             <h3>Legal y Ética</h3>
 
             <ul>

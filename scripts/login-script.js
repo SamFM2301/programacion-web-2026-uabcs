@@ -1,8 +1,8 @@
-const btnsToggle = document.querySelectorAll(".btn-toggle");
+const toggleButtons = document.querySelectorAll(".btn-toggle");
 const infoSection = document.querySelector(".info-section");
 
-btnsToggle.forEach((btn) => {
+toggleButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    infoSection.classList.toggle("invertido");
+    infoSection.classList.toggle("inverted");
   });
 });
