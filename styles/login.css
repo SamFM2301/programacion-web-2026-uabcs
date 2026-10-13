@@ -203,3 +203,55 @@ main .container {
   align-items: center;
   text-align: center;
 }
+
+/* === RESPONSIVE === */
+
+/* Tablet: 768px - 1023px */
+@media (max-width: 1023px) {
+  .login,
+  .register {
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+/* Movil: 767px */
+@media (max-width: 767px) {
+  .header > .container {
+    height: 80px;
+  }
+
+  .header img {
+    width: 96px;
+  }
+
+  /* Oculatar panel */
+  .info-section {
+    display: none;
+  }
+
+  .info-section.inverted ~ .register,
+  .info-section:not(.inverted) ~ .login {
+    display: none;
+  }
+
+  .login,
+  .register {
+    width: 100%;
+    padding: var(--space-8) var(--space-1);
+  }
+
+  .login-header h3 {
+    font-size: var(--fs-xl);
+  }
+
+  .check {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    font-size: var(--fs-md);
+  }
+
+  .footer {
+    height: auto;
+    padding-block: var(--space-6);
+  }
+}

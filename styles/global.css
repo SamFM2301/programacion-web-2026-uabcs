@@ -134,3 +134,10 @@ a {
 ul li {
   list-style: none;
 }
+
+/* Movil: 767px */
+@media (max-width: 767px) {
+  :root {
+    --lateral-spacing: var(--space-4);
+  }
+}
