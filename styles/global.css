@@ -1,38 +1,77 @@
+/* ==================================================
+   ÍNDICE - global.css
+   1. Fuentes
+   2. Variables (modo claro)
+   3. Variables (modo oscuro)
+   4. Reset
+   5. Utilidades (.container, .sr-only)
+   6. Responsive
+   7. Movimiento reducido
+   ================================================== */
+
+/* 1. FUENTES */
+
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("../assets/fonts/PlusJakartaSans.ttf") format("truetype");
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans.ttf') format('truetype');
 }
 
+/* 2. VARIABLES (MODO CLARO) */
+
 :root {
+  color-scheme: light dark;
+
   --max-width: 1280px;
   --lateral-spacing: var(--space-6);
+  --header-height: 80px;
 
-  --color-background: #eef4ff;
-  --color-background-2: #f5f7fa;
-  --color-contrast: #ffffff;
+  --color-bg: #eef4ff;
+  --color-header-bg: #f5f7fa;
+  --color-card: #ffffff;
   --color-border: #e1e5eb;
   --color-border-strong: #cbd2dc;
 
-  --color-blue-primary: #2b4c7e;
-  --color-blue-primary-hover: #21406a;
-  --color-dark-blue: #1b365d;
+  --color-primary: #2b4c7e;
+  --color-primary-hover: #21406a;
+  --color-on-primary: #ffffff;
 
-  --color-background-light: #e7eef8;
-  --color-border-background-light: #cbdbef;
+  --color-accent: #9a442d;
+  --color-accent-hover: #833824;
+  --color-accent-underline: #9a442d66;
+
+  --color-heading: #002046;
+  --color-selected: #002046;
+  --color-on-selected: #ffffff;
 
   --color-text-primary: #1b2431;
   --color-text-secondary: #5b6472;
   --color-text-tertiary: #8b93a1;
 
-  --color-green-icon: #003d36;
-  --color-orange-dark: #9a442d;
-  --color-orange-dark-hover: #833824;
-
-  --color-navy: #002046;
-  --color-surface: #f8f9ff;
+  --color-badge-bg: #f8f9ff;
   --color-field: #e8eefb;
+  --color-field-hover: #cbdbef;
+  --color-chip-hover: #e7eef8;
+  --color-hover-overlay: rgb(0 0 0 / 10%);
 
-  --base-font: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-success: #1f9d55;
+  --color-success-text: #003d36;
+  --color-rating: #e8833a;
+
+  --color-step-icon-bg: #dbe9ff;
+  --color-step-icon-bg-alt: #ffdbd2;
+  --color-step-corner: #dbe9ff66;
+  --color-step-corner-alt: #ffdbd266;
+
+  --color-footer-bg: #f8f9ff;
+  --color-footer-badge-bg: #d5e4f9;
+  --color-footer-badge-text: #44474e;
+  --color-footer-link-hover: #2b4c7e;
+
+  --color-login-panel: #cbdbef;
+
+  --logo-filter: none;
+
+  --base-font: 'Plus Jakarta Sans', system-ui, sans-serif;
 
   /* Tamaños de letra */
   --fs-2xs: 0.7rem;
@@ -44,7 +83,11 @@
   --fs-xl: 1.25rem;
   --fs-2xl: 1.75rem;
   --fs-3xl: 2rem;
-  --fs-display: clamp(2.25rem, 3.6vw, 3rem);
+
+  /* Tamaños fluidos */
+  --fs-display: clamp(2rem, 1.2rem + 3.5vw, 3.5rem);
+  --fs-section-title: clamp(1.5rem, 1rem + 2vw, 2rem);
+  --fs-hero-text: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
 
   /* Peso de las fuentes */
   --fw-regular: 400;
@@ -95,6 +138,67 @@
   --transition-slow: 0.6s ease;
 }
 
+/* 3. VARIABLES (MODO OSCURO) */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1724;
+    --color-header-bg: #141e2e;
+    --color-card: #1a2536;
+    --color-border: #2a3648;
+    --color-border-strong: #3a475b;
+
+    --color-primary: #5b8bd6;
+    --color-primary-hover: #4a7bc8;
+    --color-on-primary: #ffffff;
+
+    --color-accent: #e0835f;
+    --color-accent-hover: #ec9675;
+    --color-accent-underline: #e0835f66;
+
+    --color-heading: #e8eefc;
+    --color-selected: #3d6bb3;
+    --color-on-selected: #ffffff;
+
+    --color-text-primary: #e6ebf2;
+    --color-text-secondary: #a7b0be;
+    --color-text-tertiary: #7d8797;
+
+    --color-badge-bg: #1a2536;
+    --color-field: #212d40;
+    --color-field-hover: #2a3850;
+    --color-chip-hover: #233148;
+    --color-hover-overlay: rgb(255 255 255 / 8%);
+
+    --color-success: #34d399;
+    --color-success-text: #4fd1a5;
+    --color-rating: #f5a35c;
+
+    --color-step-icon-bg: #23385a;
+    --color-step-icon-bg-alt: #4a2a22;
+    --color-step-corner: #23385a66;
+    --color-step-corner-alt: #4a2a2266;
+
+    --color-footer-bg: #111a28;
+    --color-footer-badge-bg: #1f3150;
+    --color-footer-badge-text: #c5d3e8;
+    --color-footer-link-hover: #8fb3ec;
+
+    --color-login-panel: #23385a;
+
+    --logo-filter: brightness(0) invert(1);
+
+    --shadow-xs: 0 1px 6px rgb(0 0 0 / 30%);
+    --shadow-sm: 0 4px 12px rgb(0 0 0 / 35%);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 35%);
+    --shadow-lg: 0 12px 32px rgb(0 0 0 / 40%);
+    --shadow-xl: 0 20px 40px rgb(0 0 0 / 45%);
+    --shadow-header: 2px 0 25px rgb(0 0 0 / 40%);
+  }
+}
+
+/* 4. RESET */
+
 *,
 *::before,
 *::after {
@@ -105,7 +209,20 @@
 
 body {
   font-family: var(--base-font);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* 5. UTILIDADES */
 
 .container {
   width: 100%;
@@ -126,18 +243,24 @@ body {
   border: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul li {
-  list-style: none;
-}
+/* 6. RESPONSIVE */
 
 /* Movil: 767px */
 @media (max-width: 767px) {
   :root {
     --lateral-spacing: var(--space-4);
+  }
+}
+
+/* 7. MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

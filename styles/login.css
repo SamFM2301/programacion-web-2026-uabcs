@@ -1,11 +1,23 @@
+/* ==================================================
+   INDICE - login.css
+   1. Base de la pagina
+   2. Header
+   3. Main y panel lateral
+   4. Formularios (login y registro)
+   5. Footer
+   6. Responsive
+   ================================================== */
+
+/* 1. BASE */
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
 }
 
-/* === HEADER === */
+/* 2. HEADER */
 
 .header > .container {
   height: 100px;
@@ -16,9 +28,10 @@ body {
 
 .header img {
   width: 120px;
+  filter: var(--logo-filter);
 }
 
-/* === MAIN === */
+/* 3. MAIN Y PANEL LATERAL */
 
 main {
   display: flex;
@@ -30,9 +43,8 @@ main .container {
   display: flex;
   align-items: center;
   border-radius: var(--radius-lg);
-  background-color: #fff;
+  background-color: var(--color-card);
   overflow: hidden;
-  transition: all var(--transition-base);
 }
 
 .info-section {
@@ -42,12 +54,14 @@ main .container {
   width: 50%;
   height: 100%;
   transition: transform var(--transition-slow);
-  background-color: aqua;
+  background-color: var(--color-login-panel);
 }
 
 .info-section.inverted {
   transform: translateX(100%);
 }
+
+/* 4. FORMULARIOS */
 
 .login,
 .register {
@@ -70,7 +84,7 @@ main .container {
   border-radius: var(--radius-full);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
 }
 
 .login-header h3 {
@@ -106,14 +120,16 @@ main .container {
   padding-inline: var(--space-4);
   border: 1px solid transparent;
   border-radius: var(--radius-md);
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   color: var(--color-text-secondary);
-  transition: all var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .input-icon:focus-within {
-  background-color: #fff;
-  border-color: var(--color-blue-primary);
+  background-color: var(--color-card);
+  border-color: var(--color-primary);
 }
 
 .input-text {
@@ -141,14 +157,14 @@ main .container {
 
 .check a,
 .login-link a {
-  color: var(--color-orange-dark);
+  color: var(--color-accent);
   font-weight: var(--fw-semibold);
   transition: color var(--transition-base);
 }
 
 .check a:hover,
 .login-link a:hover {
-  color: var(--color-orange-dark-hover);
+  color: var(--color-accent-hover);
 }
 
 .btn-login {
@@ -158,14 +174,23 @@ main .container {
   border: none;
   border-radius: var(--radius-md);
   outline: none;
-  background-color: var(--color-blue-primary);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-fast);
 }
 
-.btn-login:hover {
-  background-color: var(--color-blue-primary-hover);
+.btn-login:not(:disabled):hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-login:focus-visible,
+.login-link button:focus-visible,
+.check a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .btn-login:active {
@@ -185,15 +210,15 @@ main .container {
   font-weight: var(--fw-semibold);
   border: none;
   cursor: pointer;
-  color: var(--color-orange-dark);
+  color: var(--color-accent);
   transition: color var(--transition-base);
 }
 
 .login-link button:hover {
-  color: var(--color-orange-dark-hover);
+  color: var(--color-accent-hover);
 }
 
-/* === FOOTER === */
+/* 5. FOOTER */
 
 .footer {
   height: 80px;
@@ -204,7 +229,7 @@ main .container {
   text-align: center;
 }
 
-/* === RESPONSIVE === */
+/* 6. RESPONSIVE */
 
 /* Tablet: 768px - 1023px */
 @media (max-width: 1023px) {

@@ -63,72 +63,73 @@
     </svg>
 
     <header class="header">
-      <div class="container header-container">
+      <div class="container header__container">
         <img
           src="assets/img/mente-logo.webp"
-          class="header-logo"
+          class="header__logo"
           alt="mente logo"
         />
 
-        <nav class="header-options">
-          <ul>
-            <li><a href="#">Encontrar psicólogo</a></li>
-            <li><a href="#">Terapia online</a></li>
-            <li><a href="#">Instituciones</a></li>
-            <li><a href="#">Cómo funciona</a></li>
-            <li><a href="#">Para profesionales</a></li>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="#" class="header__link">Encontrar psicólogo</a></li>
+            <li><a href="#" class="header__link">Terapia online</a></li>
+            <li><a href="#" class="header__link">Instituciones</a></li>
+            <li><a href="#" class="header__link">Cómo funciona</a></li>
+            <li><a href="#" class="header__link">Para profesionales</a></li>
           </ul>
         </nav>
 
-        <div class="header-buttons-section">
-          <a href="pages/login.html" class="btn-login">Iniciar sesión</a>
-          <a href="pages/login.html" class="btn-register">Registrarse</a>
+        <div class="header__actions">
+          <a href="pages/login.html" class="btn btn--ghost">Iniciar sesión</a>
+          <a href="pages/login.html" class="btn btn--primary">Registrarse</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero-section">
-        <div class="container hero-container">
-          <div class="info-section">
-            <div class="certified-tag">
-              <svg class="icon tag-dot" aria-hidden="true">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__info">
+            <div class="badge">
+              <svg class="icon badge__dot" aria-hidden="true">
                 <use xlink:href="assets/icons/sprite.svg#tag-dot"></use>
               </svg>
-              <svg class="icon tag-verified" aria-hidden="true">
+              <svg class="icon badge__icon" aria-hidden="true">
                 <use xlink:href="assets/icons/sprite.svg#tag-verified"></use>
               </svg>
               <span>+180 psicólogos certificados y colegiados</span>
             </div>
 
-            <h1 class="hero-title">
-              Cuidado psicológico profesional y <span>cercano</span>, sin salir
+            <h1 class="hero__title">
+              Cuidado psicológico profesional y <span class="hero__highlight">cercano</span>, sin salir
               de tu hogar
             </h1>
 
-            <p class="hero-paragraph">
+            <p class="hero__text">
               Conecta por videollamada segura con psicoterapeutas especializados
               de verdad. Sesiones individuales desde la comodidad y privacidad
               de tu espacio, a tu propio ritmo.
             </p>
 
             <form
-              class="search-appointment"
+              class="search"
               role="search"
               action="#"
               method="get"
             >
-              <fieldset class="search-modality">
+              <fieldset class="search__modality">
                 <legend class="sr-only">Modalidad de la sesión</legend>
 
                 <input
                   type="radio"
                   name="modality"
                   id="online"
+                  class="search__radio"
                   value="online"
                   checked
                 />
-                <label for="online">
+                <label for="online" class="search__option">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#videocam"></use>
                   </svg>
@@ -139,9 +140,10 @@
                   type="radio"
                   name="modality"
                   id="in-person"
+                  class="search__radio"
                   value="in-person"
                 />
-                <label for="in-person">
+                <label for="in-person" class="search__option">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#building"></use>
                   </svg>
@@ -149,8 +151,8 @@
                 </label>
               </fieldset>
 
-              <div class="search-fields">
-                <label class="search-field search-field-topic">
+              <div class="search__fields">
+                <label class="search__field search__field--topic">
                   <span class="sr-only">Motivo de consulta</span>
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#search"></use>
@@ -158,22 +160,23 @@
                   <input
                     type="text"
                     name="topic"
+                    class="search__input"
                     placeholder="Ansiedad y estrés"
                   />
                 </label>
 
-                <label class="search-field search-field-date">
+                <label class="search__field search__field--date">
                   <span class="sr-only">Cuándo</span>
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#calendar"></use>
                   </svg>
-                  <select name="date">
+                  <select name="date" class="search__input">
                     <option value="week">Esta semana</option>
                     <option value="month">Este mes</option>
                   </select>
                 </label>
 
-                <button type="submit" class="btn-search">
+                <button type="submit" class="btn btn--accent search__button">
                   Buscar
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
@@ -181,7 +184,7 @@
                 </button>
               </div>
 
-              <ul class="search-guarantees">
+              <ul class="search__guarantees">
                 <li>
                   <svg class="icon" aria-hidden="true">
                     <use
@@ -197,7 +200,7 @@
                   Primera sesión en 24h
                 </li>
                 <li>
-                  <svg class="icon icon-star" aria-hidden="true">
+                  <svg class="icon search__star" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#star"></use>
                   </svg>
                   4.9/5 satisfacción
@@ -206,16 +209,16 @@
             </form>
           </div>
 
-          <div class="image-section">
-            <div class="image-content">
+          <div class="hero__media">
+            <div class="hero__frame">
               <img
                 src="assets/img/psychology-meeting.webp"
-                class="hero-image"
+                class="hero__image"
                 alt="Persona en videollamada con su psicólogo"
               />
 
-              <div class="session-tag">
-                <svg class="icon live-dot" aria-hidden="true">
+              <div class="live-tag">
+                <svg class="icon live-tag__dot" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#tag-dot"></use>
                 </svg>
                 <svg class="icon" aria-hidden="true">
@@ -227,33 +230,33 @@
               <div class="doctor-card">
                 <img
                   src="assets/img/psychologist-profile.webp"
-                  class="doctor-avatar"
+                  class="doctor-card__avatar"
                   width="48"
                   height="48"
                   alt="Foto de perfil del Dr. Samuel Frías"
                 />
 
-                <h2 class="doctor-name">
+                <h2 class="doctor-card__name">
                   Dr. Samuel Frías
-                  <svg class="icon doctor-verified" aria-hidden="true">
+                  <svg class="icon doctor-card__verified" aria-hidden="true">
                     <use
                       xlink:href="assets/icons/sprite.svg#tag-verified"
                     ></use>
                   </svg>
                 </h2>
 
-                <p class="doctor-availability">
+                <p class="doctor-card__availability">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#tag-dot"></use>
                   </svg>
                   Disponible hoy para videollamada
                 </p>
 
-                <p class="doctor-rating">
+                <p class="doctor-card__rating">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="assets/icons/sprite.svg#star"></use>
                   </svg>
-                  4.9 <span>(128 reseñas)</span>
+                  4.9 <span class="doctor-card__reviews">(128 reseñas)</span>
                 </p>
               </div>
             </div>
@@ -261,27 +264,27 @@
         </div>
       </section>
 
-      <section class="categories-section" aria-labelledby="categories-title">
+      <section class="categories" aria-labelledby="categories-title">
         <div class="container">
-          <div class="categories-header">
+          <div class="categories__header">
             <div>
-              <p class="categories-eyebrow">Especialidades clínicas</p>
-              <h2 class="categories-title" id="categories-title">
+              <p class="categories__eyebrow">Especialidades clínicas</p>
+              <h2 class="categories__title" id="categories-title">
                 Explora por motivo de consulta
               </h2>
             </div>
 
-            <p class="categories-description">
+            <p class="categories__description">
               Cada proceso requiere una escucha experta. Encuentra terapeutas
               formados con metodologías basadas en evidencia.
             </p>
           </div>
 
-          <ul class="category-chips">
+          <ul class="categories__chips">
             <li>
               <button
                 type="button"
-                class="chip chip-active"
+                class="chip chip--active"
                 aria-pressed="true"
               >
                 Todas
@@ -321,73 +324,73 @@
         </div>
       </section>
 
-      <section class="how-it-works-section">
-        <div class="container how-it-works-container">
-          <span class="how-it-works-eyebrow"
+      <section class="steps">
+        <div class="container steps__container">
+          <span class="steps__eyebrow"
             >Un proceso simple y transparente</span
           >
 
-          <h2 class="how-it-works-title">
+          <h2 class="steps__title">
             ¿Cómo funciona la terapia en Mente?
           </h2>
 
-          <p class="how-it-works-description">
+          <p class="steps__description">
             Diseñado para eliminar fricciones y cuidar de tu tranquilidad desde
             el momento en que decides iniciar tu camino.
           </p>
 
           <!-- SECCION DE CARDS -->
 
-          <div class="step-cards">
+          <div class="steps__cards">
             <!-- PASO 1-->
             <div class="step-card">
-              <div class="step-card-icon-wrapper step-card-icon-wrapper-1">
-                <svg class="step-card-icon" aria-hidden="true">
+              <div class="step-card__icon-wrapper">
+                <svg class="step-card__icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#list-search"></use>
                 </svg>
               </div>
 
-              <div class="step-card-corner step-card-corner-1"></div>
+              <div class="step-card__corner"></div>
 
-              <span class="step-card-number">Paso 01</span>
+              <span class="step-card__number">Paso 01</span>
 
-              <h2 class="step-card-title">1. Elige a tu psicólogo ideal</h2>
+              <h2 class="step-card__title">1. Elige a tu psicólogo ideal</h2>
 
-              <p class="step-card-text">
+              <p class="step-card__text">
                 Filtra por motivo de consulta, enfoque terapéutico y lee
                 valoraciones detalladas de pacientes previos.
               </p>
 
-              <a href="#" class="step-card-link">
+              <a href="#" class="step-card__link">
                 Ver perfiles verificados
-                <svg class="step-card-icon" aria-hidden="true">
+                <svg class="step-card__link-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
             </div>
 
             <!-- PASO 2-->
-            <div class="step-card">
-              <div class="step-card-icon-wrapper step-card-icon-wrapper-2">
-                <svg class="step-card-icon" aria-hidden="true">
+            <div class="step-card step-card--alt">
+              <div class="step-card__icon-wrapper">
+                <svg class="step-card__icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#lock-cog"></use>
                 </svg>
               </div>
 
-              <div class="step-card-corner step-card-corner-2"></div>
+              <div class="step-card__corner"></div>
 
-              <span class="step-card-number">Paso 02</span>
+              <span class="step-card__number">Paso 02</span>
 
-              <h2 class="step-card-title">2. Agenda tu cita en 2 minutos</h2>
+              <h2 class="step-card__title">2. Agenda tu cita en 2 minutos</h2>
 
-              <p class="step-card-text">
+              <p class="step-card__text">
                 Elige el día y la hora que mejor se adapten a tu rutina sin
                 intermediarios, mensajes tardíos ni llamadas.
               </p>
 
-              <a href="#" class="step-card-link">
+              <a href="#" class="step-card__link">
                 Disponibilidad inmediata
-                <svg class="step-card-icon" aria-hidden="true">
+                <svg class="step-card__link-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
@@ -395,26 +398,26 @@
 
             <!-- PASO 3-->
             <div class="step-card">
-              <div class="step-card-icon-wrapper step-card-icon-wrapper-3">
-                <svg class="step-card-icon" aria-hidden="true">
+              <div class="step-card__icon-wrapper">
+                <svg class="step-card__icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#list-search"></use>
                 </svg>
               </div>
 
-              <div class="step-card-corner step-card-corner-3"></div>
+              <div class="step-card__corner"></div>
 
-              <span class="step-card-number">Paso 03</span>
+              <span class="step-card__number">Paso 03</span>
 
-              <h2 class="step-card-title">3. Conéctate desde donde estés</h2>
+              <h2 class="step-card__title">3. Conéctate desde donde estés</h2>
 
-              <p class="step-card-text">
+              <p class="step-card__text">
                 Ingresa a tu sala privada con cifrado clínico de extremo a
                 extremo desde tu computadora, tablet o móvil.
               </p>
 
-              <a href="#" class="step-card-link">
+              <a href="#" class="step-card__link">
                 Sala 100% segura
-                <svg class="step-card-icon" aria-hidden="true">
+                <svg class="step-card__link-icon" aria-hidden="true">
                   <use xlink:href="assets/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
@@ -425,18 +428,22 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-main">
-          <div class="general-info">
-            <img src="assets/img/mente-logo-plain.webp" alt="Logo de mente" />
+      <div class="container footer__container">
+        <div class="footer__main">
+          <div class="footer__info">
+            <img
+              src="assets/img/mente-logo-plain.webp"
+              class="footer__logo"
+              alt="Logo de mente"
+            />
 
-            <p>
+            <p class="footer__text">
               Plataforma integral de salud mental y bienestar emocional.
               Conectamos pacientes con psicólogos colegiados y verificados para
               consultas online y presenciales en un entorno seguro y empático.
             </p>
 
-            <div class="tag">
+            <div class="footer__badge">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="assets/icons/sprite.svg#shield-check"></use>
               </svg>
@@ -444,58 +451,58 @@
             </div>
           </div>
 
-          <div class="specialty footer-list">
-            <h3>Especialidades</h3>
+          <div class="footer__column footer__column--specialties">
+            <h3 class="footer__heading">Especialidades</h3>
 
-            <ul>
-              <li><a href="#">Ansiedad y estrés</a></li>
-              <li><a href="#">Depresión</a></li>
-              <li><a href="#">Terapia de pareja</a></li>
-              <li><a href="#">Autoestima y crecimiento</a></li>
-              <li><a href="#">Terapia infanto-juvenil</a></li>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Ansiedad y estrés</a></li>
+              <li><a href="#" class="footer__link">Depresión</a></li>
+              <li><a href="#" class="footer__link">Terapia de pareja</a></li>
+              <li><a href="#" class="footer__link">Autoestima y crecimiento</a></li>
+              <li><a href="#" class="footer__link">Terapia infanto-juvenil</a></li>
             </ul>
           </div>
 
-          <div class="resources footer-list">
-            <h3>Recursos y Ayuda</h3>
+          <div class="footer__column footer__column--resources">
+            <h3 class="footer__heading">Recursos y Ayuda</h3>
 
-            <ul>
+            <ul class="footer__list">
               <li>
-                <a href="#">
+                <a href="#" class="footer__link">
                   <span>Línea de crisis 24/7</span>
                 </a>
               </li>
-              <li><a href="#">Guías emocionales</a></li>
-              <li><a href="#">Preguntas frecuentes</a></li>
-              <li><a href="#">Contacto y soporte</a></li>
-              <li><a href="#">Planes para empresas</a></li>
+              <li><a href="#" class="footer__link">Guías emocionales</a></li>
+              <li><a href="#" class="footer__link">Preguntas frecuentes</a></li>
+              <li><a href="#" class="footer__link">Contacto y soporte</a></li>
+              <li><a href="#" class="footer__link">Planes para empresas</a></li>
             </ul>
           </div>
 
-          <div class="legal footer-list">
-            <h3>Legal y Ética</h3>
+          <div class="footer__column footer__column--legal">
+            <h3 class="footer__heading">Legal y Ética</h3>
 
-            <ul>
-              <li><a href="#">Términos de servicio</a></li>
-              <li><a href="#">Aviso de privacidad</a></li>
-              <li><a href="#">Código deontológico</a></li>
-              <li><a href="#">Protección de datos médicos</a></li>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Términos de servicio</a></li>
+              <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
+              <li><a href="#" class="footer__link">Código deontológico</a></li>
+              <li><a href="#" class="footer__link">Protección de datos médicos</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="privacy">
-          <p>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="assets/icons/sprite.svg#copyright"></use>
             </svg>
             2026 Mente Salud Mental S.L. Todos los derechos reservados.
           </p>
 
-          <ul>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Términos</a></li>
-            <li><a href="#">Soporte</a></li>
+          <ul class="footer__legal">
+            <li><a href="#" class="footer__link">Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos</a></li>
+            <li><a href="#" class="footer__link">Soporte</a></li>
           </ul>
         </div>
       </div>
