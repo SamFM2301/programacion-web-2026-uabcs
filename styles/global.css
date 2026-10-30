@@ -140,61 +140,59 @@
 
 /* 3. VARIABLES (MODO OSCURO) */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0f1724;
-    --color-header-bg: #141e2e;
-    --color-card: #1a2536;
-    --color-border: #2a3648;
-    --color-border-strong: #3a475b;
+:root[data-theme='dark'] {
+  --color-bg: #0f1724;
+  --color-header-bg: #141e2e;
+  --color-card: #1a2536;
+  --color-border: #2a3648;
+  --color-border-strong: #3a475b;
 
-    --color-primary: #5b8bd6;
-    --color-primary-hover: #4a7bc8;
-    --color-on-primary: #ffffff;
+  --color-primary: #5b8bd6;
+  --color-primary-hover: #4a7bc8;
+  --color-on-primary: #ffffff;
 
-    --color-accent: #e0835f;
-    --color-accent-hover: #ec9675;
-    --color-accent-underline: #e0835f66;
+  --color-accent: #e0835f;
+  --color-accent-hover: #ec9675;
+  --color-accent-underline: #e0835f66;
 
-    --color-heading: #e8eefc;
-    --color-selected: #3d6bb3;
-    --color-on-selected: #ffffff;
+  --color-heading: #e8eefc;
+  --color-selected: #3d6bb3;
+  --color-on-selected: #ffffff;
 
-    --color-text-primary: #e6ebf2;
-    --color-text-secondary: #a7b0be;
-    --color-text-tertiary: #7d8797;
+  --color-text-primary: #e6ebf2;
+  --color-text-secondary: #a7b0be;
+  --color-text-tertiary: #7d8797;
 
-    --color-badge-bg: #1a2536;
-    --color-field: #212d40;
-    --color-field-hover: #2a3850;
-    --color-chip-hover: #233148;
-    --color-hover-overlay: rgb(255 255 255 / 8%);
+  --color-badge-bg: #1a2536;
+  --color-field: #212d40;
+  --color-field-hover: #2a3850;
+  --color-chip-hover: #233148;
+  --color-hover-overlay: rgb(255 255 255 / 8%);
 
-    --color-success: #34d399;
-    --color-success-text: #4fd1a5;
-    --color-rating: #f5a35c;
+  --color-success: #34d399;
+  --color-success-text: #4fd1a5;
+  --color-rating: #f5a35c;
 
-    --color-step-icon-bg: #23385a;
-    --color-step-icon-bg-alt: #4a2a22;
-    --color-step-corner: #23385a66;
-    --color-step-corner-alt: #4a2a2266;
+  --color-step-icon-bg: #23385a;
+  --color-step-icon-bg-alt: #4a2a22;
+  --color-step-corner: #23385a66;
+  --color-step-corner-alt: #4a2a2266;
 
-    --color-footer-bg: #111a28;
-    --color-footer-badge-bg: #1f3150;
-    --color-footer-badge-text: #c5d3e8;
-    --color-footer-link-hover: #8fb3ec;
+  --color-footer-bg: #111a28;
+  --color-footer-badge-bg: #1f3150;
+  --color-footer-badge-text: #c5d3e8;
+  --color-footer-link-hover: #8fb3ec;
 
-    --color-login-panel: #23385a;
+  --color-login-panel: #23385a;
 
-    --logo-filter: brightness(0) invert(1);
+  --logo-filter: brightness(0) invert(1);
 
-    --shadow-xs: 0 1px 6px rgb(0 0 0 / 30%);
-    --shadow-sm: 0 4px 12px rgb(0 0 0 / 35%);
-    --shadow-md: 0 8px 24px rgb(0 0 0 / 35%);
-    --shadow-lg: 0 12px 32px rgb(0 0 0 / 40%);
-    --shadow-xl: 0 20px 40px rgb(0 0 0 / 45%);
-    --shadow-header: 2px 0 25px rgb(0 0 0 / 40%);
-  }
+  --shadow-xs: 0 1px 6px rgb(0 0 0 / 30%);
+  --shadow-sm: 0 4px 12px rgb(0 0 0 / 35%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 35%);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 40%);
+  --shadow-xl: 0 20px 40px rgb(0 0 0 / 45%);
+  --shadow-header: 2px 0 25px rgb(0 0 0 / 40%);
 }
 
 /* 4. RESET */
@@ -220,6 +218,12 @@ a {
 
 ul li {
   list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* 5. UTILIDADES */

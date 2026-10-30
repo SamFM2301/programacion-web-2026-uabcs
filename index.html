@@ -41,6 +41,11 @@
 
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/principal-page.css" />
+
+    <script type="module" src="scripts/header-menu.js"></script>
+    <script type="module" src="scripts/theme-switch.js"></script>
+    
+    <script src="scripts/search.js" defer></script>
   </head>
   <body>
     <svg
@@ -70,7 +75,7 @@
           alt="mente logo"
         />
 
-        <nav class="header__nav">
+        <nav class="header__nav" id="header-nav">
           <ul class="header__list">
             <li><a href="#" class="header__link">Encontrar psicólogo</a></li>
             <li><a href="#" class="header__link">Terapia online</a></li>
@@ -81,9 +86,45 @@
         </nav>
 
         <div class="header__actions">
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Modo oscuro"
+          >
+            <span class="theme-switch__thumb"></span>
+
+            <svg
+              class="theme-switch__icon theme-switch__icon--sun"
+              aria-hidden="true"
+            >
+              <use xlink:href="assets/icons/sprite.svg#sun"></use>
+            </svg>
+
+            <svg
+              class="theme-switch__icon theme-switch__icon--moon"
+              aria-hidden="true"
+            >
+              <use xlink:href="assets/icons/sprite.svg#moon"></use>
+            </svg>
+          </button>
+
           <a href="pages/login.html" class="btn btn--ghost">Iniciar sesión</a>
           <a href="pages/login.html" class="btn btn--primary">Registrarse</a>
         </div>
+
+        <button
+          class="header__menu-btn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <svg class="icon header__menu-icon" aria-hidden="true">
+            <use xlink:href="assets/icons/sprite.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -102,8 +143,9 @@
             </div>
 
             <h1 class="hero__title">
-              Cuidado psicológico profesional y <span class="hero__highlight">cercano</span>, sin salir
-              de tu hogar
+              Cuidado psicológico profesional y
+              <span class="hero__highlight">cercano</span>, sin salir de tu
+              hogar
             </h1>
 
             <p class="hero__text">
@@ -112,12 +154,7 @@
               de tu espacio, a tu propio ritmo.
             </p>
 
-            <form
-              class="search"
-              role="search"
-              action="#"
-              method="get"
-            >
+            <form class="search" role="search" action="#" method="get">
               <fieldset class="search__modality">
                 <legend class="sr-only">Modalidad de la sesión</legend>
 
@@ -326,13 +363,9 @@
 
       <section class="steps">
         <div class="container steps__container">
-          <span class="steps__eyebrow"
-            >Un proceso simple y transparente</span
-          >
+          <span class="steps__eyebrow">Un proceso simple y transparente</span>
 
-          <h2 class="steps__title">
-            ¿Cómo funciona la terapia en Mente?
-          </h2>
+          <h2 class="steps__title">¿Cómo funciona la terapia en Mente?</h2>
 
           <p class="steps__description">
             Diseñado para eliminar fricciones y cuidar de tu tranquilidad desde
@@ -458,8 +491,12 @@
               <li><a href="#" class="footer__link">Ansiedad y estrés</a></li>
               <li><a href="#" class="footer__link">Depresión</a></li>
               <li><a href="#" class="footer__link">Terapia de pareja</a></li>
-              <li><a href="#" class="footer__link">Autoestima y crecimiento</a></li>
-              <li><a href="#" class="footer__link">Terapia infanto-juvenil</a></li>
+              <li>
+                <a href="#" class="footer__link">Autoestima y crecimiento</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Terapia infanto-juvenil</a>
+              </li>
             </ul>
           </div>
 
@@ -486,7 +523,9 @@
               <li><a href="#" class="footer__link">Términos de servicio</a></li>
               <li><a href="#" class="footer__link">Aviso de privacidad</a></li>
               <li><a href="#" class="footer__link">Código deontológico</a></li>
-              <li><a href="#" class="footer__link">Protección de datos médicos</a></li>
+              <li>
+                <a href="#" class="footer__link">Protección de datos médicos</a>
+              </li>
             </ul>
           </div>
         </div>
