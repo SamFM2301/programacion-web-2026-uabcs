@@ -6,6 +6,7 @@
    4. Formularios (login y registro)
    5. Footer
    6. Responsive
+   7. Errores de validacion
    ================================================== */
 
 /* 1. BASE */
@@ -87,7 +88,7 @@ main .container {
   background-color: var(--color-bg);
 }
 
-.login-header h3 {
+.login-header h2 {
   font-size: var(--fs-2xl);
   font-weight: var(--fw-bold);
   color: var(--color-text-primary);
@@ -127,6 +128,12 @@ main .container {
     border-color var(--transition-base);
 }
 
+.input-icon .icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 .input-icon:focus-within {
   background-color: var(--color-card);
   border-color: var(--color-primary);
@@ -145,6 +152,81 @@ main .container {
 
 .input-text::placeholder {
   color: var(--color-text-tertiary);
+}
+
+/* Dos campos lado a lado (registro) */
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+select.input-text {
+  cursor: pointer;
+}
+
+select.input-text option {
+  background-color: var(--color-card);
+  color: var(--color-text-primary);
+}
+
+/* Boton mostrar/ocultar contrasena */
+.btn-password {
+  display: flex;
+  align-items: center;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.btn-password:hover,
+.btn-password[aria-pressed="true"] {
+  color: var(--color-primary);
+}
+
+/* Contrasena oculta: ojo abierto. Visible: ojo tachado */
+.btn-password .icon-eye-off,
+.btn-password[aria-pressed="true"] .icon-eye {
+  display: none;
+}
+
+.btn-password[aria-pressed="true"] .icon-eye-off {
+  display: block;
+}
+
+/* Texto de ayuda debajo de un campo */
+.hint {
+  font-size: var(--fs-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* Consentimiento del aviso de privacidad */
+.consent label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.consent input {
+  margin-top: var(--space-0-5);
+  flex-shrink: 0;
+}
+
+.consent a {
+  color: var(--color-accent);
+  font-weight: var(--fw-semibold);
+  transition: color var(--transition-base);
+}
+
+.consent a:hover {
+  color: var(--color-accent-hover);
 }
 
 .check {
@@ -188,7 +270,9 @@ main .container {
 
 .btn-login:focus-visible,
 .login-link button:focus-visible,
-.check a:focus-visible {
+.check a:focus-visible,
+.btn-password:focus-visible,
+.consent a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
@@ -265,8 +349,12 @@ main .container {
     padding: var(--space-8) var(--space-1);
   }
 
-  .login-header h3 {
+  .login-header h2 {
     font-size: var(--fs-xl);
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
   }
 
   .check {
@@ -279,4 +367,56 @@ main .container {
     height: auto;
     padding-block: var(--space-6);
   }
+}
+
+/* 7. ERRORES DE VALIDACION */
+
+:root {
+  --color-error: #c0392b;
+}
+
+:root[data-theme='dark'] {
+  --color-error: #ff8a80;
+}
+
+/* Mensaje de error debajo de cada campo */
+.field-error {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-error);
+}
+
+.field-error:empty {
+  display: none;
+}
+
+/* El borde visible es el de .input-icon, por eso se pinta el contenedor */
+.input-icon:has(.invalid),
+.input-icon:has(.invalid):focus-within {
+  border-color: var(--color-error);
+}
+
+.consent input.invalid {
+  outline: 2px solid var(--color-error);
+  outline-offset: 2px;
+}
+
+.consent .field-error {
+  display: block;
+  margin-top: var(--space-1);
+}
+
+.consent .field-error:empty {
+  display: none;
+}
+
+/* Mensaje de exito al enviar el formulario */
+.form-message {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-success);
+}
+
+.form-message:empty {
+  display: none;
 }

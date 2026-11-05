@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Mente - registrate o inica sesión con nosotros para una mejor experiencia
+      Mente - regístrate o inicia sesión con nosotros para una mejor experiencia
     </title>
 
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
   <body>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <use xlink:href="../assets/icons/sprite.svg#mail"></use>
+      <use xlink:href="../assets/icons/sprite.svg#lock"></use>
+      <use xlink:href="../assets/icons/sprite.svg#eye"></use>
+      <use xlink:href="../assets/icons/sprite.svg#eye-off"></use>
+      <use xlink:href="../assets/icons/sprite.svg#user"></use>
+      <use xlink:href="../assets/icons/sprite.svg#users"></use>
+      <use xlink:href="../assets/icons/sprite.svg#calendar"></use>
+      <use xlink:href="../assets/icons/sprite.svg#phone"></use>
+    </svg>
+
     <header class="header">
       <div class="container">
         <a href="../index.html">
@@ -22,36 +36,23 @@
     </header>
 
     <main>
+      <h1 class="sr-only">Mente: inicia sesión o crea tu cuenta</h1>
+
       <div class="container">
         <div class="info-section inverted">hola</div>
 
-        <form action="#" method="post" id="login" class="login">
+        <form action="#" method="post" id="login" class="login" novalidate>
           <div class="login-header">
-            <span class="tag">PORTAL PACIENTE: MEXICO</span>
-            <h3>Bienvenido de nuevo</h3>
-            <p>Ingresa a tu cuenta para continuar con tu proceso terapeutico</p>
+            <span class="tag">PORTAL PACIENTE: MÉXICO</span>
+            <h2>Bienvenido de nuevo</h2>
+            <p>Ingresa a tu cuenta para continuar con tu proceso terapéutico</p>
           </div>
 
           <div class="field">
             <label for="login-email" class="label">Correo electrónico</label>
             <div class="input-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"
-                />
-                <path d="M3 7l9 6l9 -6" />
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="../assets/icons/sprite.svg#mail"></use>
               </svg>
 
               <input
@@ -60,31 +61,18 @@
                 name="user-email"
                 class="input-text"
                 placeholder="ejemplo@correo.com"
+                autocomplete="email"
+                required
               />
             </div>
+            <span class="field-error" data-error-for="user-email"></span>
           </div>
 
           <div class="field">
             <label for="login-password" class="label">Contraseña</label>
             <div class="input-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6"
-                />
-                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-                <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="../assets/icons/sprite.svg#lock"></use>
               </svg>
 
               <input
@@ -92,89 +80,210 @@
                 id="login-password"
                 name="user-password"
                 class="input-text"
-                placeholder="Tu contrasena segura"
+                placeholder="Tu contraseña segura"
+                autocomplete="current-password"
+                required
               />
+
+              <button
+                type="button"
+                class="btn-password"
+                aria-controls="login-password"
+                aria-pressed="false"
+                aria-label="Mostrar contraseña"
+              >
+                <svg class="icon icon-eye" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye"></use>
+                </svg>
+                <svg class="icon icon-eye-off" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye-off"></use>
+                </svg>
+              </button>
             </div>
+            <span class="field-error" data-error-for="user-password"></span>
           </div>
 
           <div class="check">
             <label>
               <input type="checkbox" name="remember-me" />
-              Recuerdame
+              Recuérdame
             </label>
-            <a href="#">Olvidaste tu contrasena?</a>
+            <a href="#">¿Olvidaste tu contraseña?</a>
           </div>
 
+          <p class="form-message"></p>
+
           <button type="submit" id="btn-login" class="btn-login">
-            Iniciar sesion &rightarrow;
+            Iniciar sesión &rightarrow;
           </button>
 
           <span class="login-link">
-            Aun no tienes cuenta?
-            <button type="button" class="btn-toggle">Registrate aqui</button>
+            ¿Aún no tienes cuenta?
+            <button type="button" class="btn-toggle">Regístrate aquí</button>
           </span>
         </form>
 
-        <form action="#" method="post" id="register" class="register">
+        <form
+          action="#"
+          method="post"
+          id="register"
+          class="register"
+          novalidate
+          inert
+        >
           <div class="login-header">
-            <span class="tag">PORTAL PACIENTE: MEXICO</span>
-            <h3>Bienvenido de nuevo</h3>
-            <p>Ingresa a tu cuenta para continuar con tu proceso terapeutico</p>
+            <span class="tag">PORTAL PACIENTE: MÉXICO</span>
+            <h2>Crea tu cuenta</h2>
+            <p>Regístrate para comenzar tu proceso terapéutico con nosotros</p>
           </div>
 
-          <div class="field">
-            <label for="register-email" class="label">Correo electrónico</label>
-            <div class="input-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"
-                />
-                <path d="M3 7l9 6l9 -6" />
-              </svg>
+          <div class="field-row">
+            <div class="field">
+              <label for="register-name" class="label">Nombre</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#user"></use>
+                </svg>
 
-              <input
-                type="email"
-                id="register-email"
-                name="user-email"
-                class="input-text"
-                placeholder="ejemplo@correo.com"
-              />
+                <input
+                  type="text"
+                  id="register-name"
+                  name="user-name"
+                  class="input-text"
+                  placeholder="Tu nombre"
+                  autocomplete="given-name"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                />
+              </div>
+              <span class="field-error" data-error-for="user-name"></span>
+            </div>
+
+            <div class="field">
+              <label for="register-lastname" class="label">Apellidos</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#user"></use>
+                </svg>
+
+                <input
+                  type="text"
+                  id="register-lastname"
+                  name="user-lastname"
+                  class="input-text"
+                  placeholder="Tus apellidos"
+                  autocomplete="family-name"
+                  required
+                  minlength="2"
+                  maxlength="80"
+                />
+              </div>
+              <span class="field-error" data-error-for="user-lastname"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="register-birthdate" class="label">
+                Fecha de nacimiento
+              </label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#calendar"></use>
+                </svg>
+
+                <input
+                  type="date"
+                  id="register-birthdate"
+                  name="user-birthdate"
+                  class="input-text"
+                  autocomplete="bday"
+                  aria-describedby="register-birthdate-hint"
+                  required
+                />
+              </div>
+              <small id="register-birthdate-hint" class="hint">
+                Debes ser mayor de 18 años.
+              </small>
+              <span class="field-error" data-error-for="user-birthdate"></span>
+            </div>
+
+            <div class="field">
+              <label for="register-sex" class="label">Sexo</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#users"></use>
+                </svg>
+
+                <select
+                  id="register-sex"
+                  name="user-sex"
+                  class="input-text"
+                  autocomplete="sex"
+                  required
+                >
+                  <option value="" selected disabled>Selecciona</option>
+                  <option value="female">Femenino</option>
+                  <option value="male">Masculino</option>
+                  <option value="other">Otro</option>
+                  <option value="unspecified">Prefiero no decirlo</option>
+                </select>
+              </div>
+              <span class="field-error" data-error-for="user-sex"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="register-email" class="label">
+                Correo electrónico
+              </label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#mail"></use>
+                </svg>
+
+                <input
+                  type="email"
+                  id="register-email"
+                  name="user-email"
+                  class="input-text"
+                  placeholder="ejemplo@correo.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <span class="field-error" data-error-for="user-email"></span>
+            </div>
+
+            <div class="field">
+              <label for="register-phone" class="label">Teléfono</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#phone"></use>
+                </svg>
+
+                <input
+                  type="tel"
+                  id="register-phone"
+                  name="user-phone"
+                  class="input-text"
+                  placeholder="612 123 4567"
+                  autocomplete="tel"
+                  required
+                  maxlength="14"
+                />
+              </div>
+              <span class="field-error" data-error-for="user-phone"></span>
             </div>
           </div>
 
           <div class="field">
             <label for="register-password" class="label">Contraseña</label>
             <div class="input-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6"
-                />
-                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-                <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="../assets/icons/sprite.svg#lock"></use>
               </svg>
 
               <input
@@ -182,25 +291,103 @@
                 id="register-password"
                 name="user-password"
                 class="input-text"
-                placeholder="Tu contrasena segura"
+                placeholder="Crea una contraseña segura"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                aria-describedby="register-password-hint"
               />
+
+              <button
+                type="button"
+                class="btn-password"
+                aria-controls="register-password"
+                aria-pressed="false"
+                aria-label="Mostrar contraseña"
+              >
+                <svg class="icon icon-eye" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye"></use>
+                </svg>
+                <svg class="icon icon-eye-off" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye-off"></use>
+                </svg>
+              </button>
             </div>
+            <small id="register-password-hint" class="hint">
+              Mínimo 8 caracteres, con al menos una mayúscula, una minúscula y
+              un número.
+            </small>
+            <span class="field-error" data-error-for="user-password"></span>
           </div>
 
-          <div class="check">
-            <label>
-              <input type="checkbox" name="remember-me" />
-              Recuerdame
+          <div class="field">
+            <label for="register-password-confirm" class="label">
+              Confirmar contraseña
             </label>
-            <a href="#">Olvidaste tu contrasena?</a>
+            <div class="input-icon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="../assets/icons/sprite.svg#lock"></use>
+              </svg>
+
+              <input
+                type="password"
+                id="register-password-confirm"
+                name="user-password-confirm"
+                class="input-text"
+                placeholder="Repite tu contraseña"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+
+              <button
+                type="button"
+                class="btn-password"
+                aria-controls="register-password-confirm"
+                aria-pressed="false"
+                aria-label="Mostrar contraseña"
+              >
+                <svg class="icon icon-eye" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye"></use>
+                </svg>
+                <svg class="icon icon-eye-off" aria-hidden="true">
+                  <use xlink:href="../assets/icons/sprite.svg#eye-off"></use>
+                </svg>
+              </button>
+            </div>
+            <span
+              class="field-error"
+              data-error-for="user-password-confirm"
+            ></span>
           </div>
+
+          <div class="consent">
+            <label>
+              <input
+                type="checkbox"
+                name="accept-privacy"
+                value="yes"
+                required
+              />
+              <span>
+                He leído y acepto el
+                <a href="#">Aviso de Privacidad</a> y los
+                <a href="#">Términos y Condiciones</a>, y otorgo mi
+                consentimiento expreso para el tratamiento de mis datos
+                personales sensibles.
+              </span>
+            </label>
+            <span class="field-error" data-error-for="accept-privacy"></span>
+          </div>
+
+          <p class="form-message"></p>
 
           <button type="submit" id="btn-register" class="btn-login">
-            Iniciar sesion &rightarrow;
+            Crear cuenta &rightarrow;
           </button>
 
           <span class="login-link">
-            Aun no tienes cuenta?
+            ¿Ya tienes cuenta?
             <button type="button" class="btn-toggle">Inicia sesión aquí</button>
           </span>
         </form>
@@ -215,6 +402,6 @@
       </div>
     </footer>
 
-    <script src="../scripts/login-script.js"></script>
+    <script type="module" src="../scripts/pages/login.js"></script>
   </body>
 </html>
