@@ -1,0 +1,23 @@
+{
+  "name": "programacion-web-2026-uabcs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamFM2301/programacion-web-2026-uabcs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamFM2301/programacion-web-2026-uabcs/issues"
+  },
+  "homepage": "https://github.com/SamFM2301/programacion-web-2026-uabcs#readme",
+  "dependencies": {
+    "sweetalert2": "^11.26.25"
+  }
+}

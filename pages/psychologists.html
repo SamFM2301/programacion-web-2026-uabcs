@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mente | Encuentra a tu psicólogo</title>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/psychologists.css" />
+
+    <script type="module" src="../scripts/components/theme-switch.js"></script>
+    <script type="module" src="../scripts/pages/psychologists.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="../index.html">
+          <img
+            src="../assets/img/mente-logo.webp"
+            class="header__logo"
+            alt="Logo de mente"
+          />
+        </a>
+
+        <div class="header__actions">
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+          >
+            Modo oscuro
+          </button>
+          <a href="../index.html">&leftarrow; Regresar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="title">Nuestros psicólogos</h1>
+
+      <p class="status" id="status" role="status"></p>
+
+      <ul class="cards" id="psychologists"></ul>
+    </main>
+  </body>
+</html>

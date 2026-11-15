@@ -1,15 +1,14 @@
+import { getSavedTheme, saveTheme, applyTheme } from '../utils/theme.js'
+
 const themeSwitch = document.querySelector('.theme-switch')
-const root = document.documentElement
+
+themeSwitch.setAttribute('aria-checked', getSavedTheme() === 'dark')
 
 themeSwitch.addEventListener('click', () => {
   const isDark = themeSwitch.getAttribute('aria-checked') === 'true'
-  const newIsDark = !isDark
+  const newTheme = isDark ? 'light' : 'dark'
 
-  themeSwitch.setAttribute('aria-checked', newIsDark)
-
-  if (newIsDark) {
-    root.setAttribute('data-theme', 'dark')
-  } else {
-    root.removeAttribute('data-theme')
-  }
+  themeSwitch.setAttribute('aria-checked', newTheme === 'dark')
+  applyTheme(newTheme)
+  saveTheme(newTheme)
 })
