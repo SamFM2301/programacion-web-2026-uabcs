@@ -125,3 +125,33 @@ export function validateRegister(data) {
 
   return errors
 }
+
+export const MODALITIES = ['Online', 'Presencial', 'Online y presencial']
+
+export function validatePsychologist(data) {
+  const errors = {}
+
+  if (!isRequired(data.name)) {
+    errors.name = 'El nombre es obligatorio.'
+  } else if (!hasMinLength(data.name, 3)) {
+    errors.name = 'El nombre debe tener al menos 3 caracteres.'
+  }
+
+  if (!isRequired(data.specialty)) {
+    errors.specialty = 'La especialidad es obligatoria.'
+  }
+
+  if (!MODALITIES.includes(data.modality)) {
+    errors.modality = 'Selecciona una modalidad.'
+  }
+
+  if (!isRequired(data.city)) {
+    errors.city = 'La ciudad es obligatoria.'
+  }
+
+  if (!(Number(data.price) > 0)) {
+    errors.price = 'El precio debe ser un número mayor a 0.'
+  }
+
+  return errors
+}

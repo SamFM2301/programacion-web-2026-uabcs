@@ -1,9 +1,12 @@
-import Swal from '../../node_modules/sweetalert2/dist/sweetalert2.esm.all.min.js'
+import Swal from '../../vendor/sweetalert2/sweetalert2.esm.all.min.js'
+import { validatePsychologist } from '../utils/validators.js'
+import { showErrors, clearErrors } from '../utils/ui.js'
 
-const DATA_URL = '../data/psychologists.json'
+const API_URL = '../api/psychologists.php'
 
 const status = document.querySelector('#status')
 const list = document.querySelector('#psychologists')
+const form = document.querySelector('#register-form')
 
 function createCard(psychologist) {
   const card = document.createElement('li')
@@ -20,8 +23,6 @@ function createCard(psychologist) {
   const details = [
     `Modalidad: ${psychologist.modality}`,
     `Ciudad: ${psychologist.city}`,
-    `Experiencia: ${psychologist.experience} años`,
-    `Calificación: ${psychologist.rating} / 5`,
     `Precio por sesión: $${psychologist.price} MXN`,
   ].map((text) => {
     const detail = document.createElement('p')
@@ -64,7 +65,7 @@ async function loadPsychologists() {
   status.classList.remove('status--error')
 
   try {
-    const response = await fetch(DATA_URL)
+    const response = await fetch(API_URL)
 
     if (!response.ok) {
       throw new Error(`Error HTTP ${response.status}`)
@@ -72,7 +73,7 @@ async function loadPsychologists() {
 
     const psychologists = await response.json()
 
-    list.append(...psychologists.map(createCard))
+    list.replaceChildren(...psychologists.map(createCard))
     status.textContent = ''
   } catch (error) {
     console.error('No se pudieron cargar los psicólogos:', error)
@@ -89,4 +90,60 @@ async function loadPsychologists() {
   }
 }
 
+async function registerPsychologist(event) {
+  event.preventDefault()
+  clearErrors(form)
+
+  const data = Object.fromEntries(new FormData(form))
+  const errors = validatePsychologist(data)
+  if (Object.keys(errors).length > 0) {
+    showErrors(form, errors)
+    return
+  }
+
+  const submit = form.querySelector('[type="submit"]')
+  submit.disabled = true
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, price: Number(data.price) }),
+    })
+
+    const body = await response.json()
+
+    if (response.status === 422) {
+      if (body.fields) {
+        showErrors(form, body.fields)
+      }
+      Swal.fire({ title: 'Datos inválidos', text: body.error, icon: 'warning' })
+      return
+    }
+
+    if (!response.ok) {
+      throw new Error(body.error || `Error HTTP ${response.status}`)
+    }
+    list.append(createCard(body))
+    form.reset()
+
+    Swal.fire({
+      title: '¡Registrado!',
+      text: `${body.name} ya aparece en la lista.`,
+      icon: 'success',
+    })
+  } catch (error) {
+    console.error('No se pudo registrar el psicólogo:', error)
+
+    Swal.fire({
+      title: 'Error al registrar',
+      text: 'No pudimos guardar el psicólogo. Inténtalo de nuevo más tarde.',
+      icon: 'error',
+    })
+  } finally {
+    submit.disabled = false
+  }
+}
+
+form.addEventListener('submit', registerPsychologist)
 loadPsychologists()

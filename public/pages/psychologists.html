@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mente | Encuentra a tu psicólogo</title>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/psychologists.css" />
+
+    <script type="module" src="../scripts/components/theme-switch.js"></script>
+    <script type="module" src="../scripts/pages/psychologists.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="../index.html">
+          <img
+            src="../assets/img/mente-logo.webp"
+            class="header__logo"
+            alt="Logo de mente"
+          />
+        </a>
+
+        <div class="header__actions">
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+          >
+            Modo oscuro
+          </button>
+          <a href="../index.html">&leftarrow; Regresar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="title">Nuestros psicólogos</h1>
+
+      <section class="register" aria-labelledby="register-title">
+        <h2 class="register__title" id="register-title">Registrar psicólogo</h2>
+
+        <form class="register__form" id="register-form" novalidate>
+          <div class="field">
+            <label class="field__label" for="name">Nombre</label>
+            <input class="field__input" id="name" name="name" type="text" placeholder="Dra. Ana López" />
+            <span class="field-error" data-error-for="name"></span>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="specialty">Especialidad</label>
+            <input class="field__input" id="specialty" name="specialty" type="text" placeholder="Ansiedad y estrés" />
+            <span class="field-error" data-error-for="specialty"></span>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="modality">Modalidad</label>
+            <select class="field__input" id="modality" name="modality">
+              <option value="">Selecciona una opción</option>
+              <option value="Online">Online</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Online y presencial">Online y presencial</option>
+            </select>
+            <span class="field-error" data-error-for="modality"></span>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="city">Ciudad</label>
+            <input class="field__input" id="city" name="city" type="text" placeholder="La Paz, B.C.S." />
+            <span class="field-error" data-error-for="city"></span>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="price">Precio por sesión (MXN)</label>
+            <input class="field__input" id="price" name="price" type="number" min="1" step="1" placeholder="600" />
+            <span class="field-error" data-error-for="price"></span>
+          </div>
+
+          <button class="register__button" type="submit">Registrar</button>
+        </form>
+      </section>
+
+      <p class="status" id="status" role="status"></p>
+
+      <ul class="cards" id="psychologists"></ul>
+    </main>
+  </body>
+</html>
