@@ -8,24 +8,9 @@ function responder(int $status, $data): void
     exit;
 }
 
+// PHP no llena $_POST con JSON (ni con PUT o DELETE): el cuerpo se lee de php://input.
 function leerJson(): ?array
 {
     $datos = json_decode(file_get_contents('php://input'), true);
     return is_array($datos) ? $datos : null;
-}
-
-function leerArchivoJson(string $ruta): array
-{
-    if (!file_exists($ruta)) {
-        return [];
-    }
-
-    $datos = json_decode(file_get_contents($ruta), true);
-    return is_array($datos) ? $datos : [];
-}
-
-function guardarArchivoJson(string $ruta, array $datos): bool
-{
-    $json = json_encode($datos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-    return file_put_contents($ruta, $json, LOCK_EX) !== false;
 }
